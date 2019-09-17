@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    S&amp;J Architects - Trai Lynne
+    
+  </title>
+
+  <meta name="description" content="I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum vi...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html">
+  <link rel="alternate" type="application/rss+xml" title="Trai Lynne" href="/blog/feed.xml">
+
+  <link rel="shortcut icon" href="/blog/img/logo.jpg" type="image/x-icon" />
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://www.trailynne.org"><img src='/blog/img/logo.jpg' style="width: auto; height: 30px"/> Trai Lynne</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>S&J Architects</h1>
+            
+            <h2 class="subheading">User Interface Project</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Trai Lynne Compton</a>
+              on February 06, 2019 &middot; <span class="reading-time" title="Estimated read time">
+  
+   7 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills.</p>
+
+<p>The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.</p>
+
+<h3 id="this-project-highlights-mastery-in">This project highlights mastery in:</h3>
+<ul>
+  <li>User Interface</li>
+  <li>Responsive Design</li>
+  <li>using Web Tools and Frameworks</li>
+  <li>Applied JavaScript.</li>
+</ul>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="https://github.com/TraiLynne/User-Interface-Project" target="_blank">Github</a></li>
+  <li><a href="http://trailynne.org/User-Interface-Project/" target="_blank">Live Demo</a></li>
+</ul>
+
+<p><img src="http://localhost:4000/img/ui-project/IMG_0047.JPG" alt="Web Pages" /></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>With any type of marketing page, you want the user to be able to view the page on any platform from desktop to a mobile phone. With this in mind, the S&amp;J Architects was designed to be responsive from the very beginning. The project scales based on the size of the screen of the device. With the use of media queries, I was able to get the layout of the page to be pixel-perfect.</p>
+
+<p>The design of the project takes the user experience into account. Since there is a lot of information provided about the company, displaying it all at once would require A LOT of scrolling. Nobody wants to be overloaded. The services page came predesigned with the tabs &amp; cards. Targeting specific topics and seeing the details right below will focus the user’s attention. I think the carousel is a nice touch for the properties that appear on the landing page.</p>
+
+<h1 id="the-journey">The Journey</h1>
+<h3 id="preparation">Preparation</h3>
+
+<p>The first step I take in any major project is to set up my Trello board in order to organize my thoughts and tasks. I used the standard lists: To Do, In Progress, Done, and Backlog.</p>
+
+<p>In order to prepare for the task, I broke down the design files that were provided. I deduced similar aspects such as the layout of the pages, the header, the footer, etc. I knew I wanted to group these similar pieces in my code in order to keep it DRY.</p>
+
+<p>From here I set up my file structure in order to start coding. Within the root directory, there are a few sub-directories with the names <code class="highlighter-rouge">components</code>, <code class="highlighter-rouge">css</code>, <code class="highlighter-rouge">less</code>, <code class="highlighter-rouge">img</code> and <code class="highlighter-rouge">js</code> that hold their corresponding files.</p>
+<h3 id="basic-html--structure">Basic HTML &amp; Structure</h3>
+
+<p>While writing HTML and setting up the structure of a page, I attempt to make code that is reusable as possible.</p>
+
+<p>After inspecting the design files provided, I noticed the similarities for each page layout.  The header and footers are all the same as well as the main structure of each page. Each page has a hero area and an area for the main content.</p>
+
+<h3 id="static-css-using-less">Static CSS using LESS</h3>
+
+<p><img src="http://localhost:4000/img/ui-project/IMG_0043.JPG" alt="Responsive Design" /></p>
+
+<p>For this project, I took advantage of the LESS preprocessor. In the past, I had globally installed LESS as well as the <code class="highlighter-rouge">less-watch-compiler</code> globally to my system.</p>
+
+<p>In order to get the LESS preprocessor up and running, I <code class="highlighter-rouge">cd</code> into my projects root directory. Within the root directory, I ran the command <code class="highlighter-rouge">less-watch-compiler less css index.less</code>.</p>
+
+<p>first thing I added to the <code class="highlighter-rouge">index.less</code> file would be the CSS reset. I wanted to use a blank slate to get the proper end result.</p>
+
+<p>The general styles of the page were completed within the main <code class="highlighter-rouge">index.less</code> file. Things like background color or the overall font family. From here, each component received it’s own LESS file housed within its subfolder.  These files were then imported into the main LESS file. I decided to organize the code like this so I could use those component files in future projects where I may need a carousel or tabbed card system.</p>
+
+<h3 id="javascript">JavaScript</h3>
+
+<p><img src="http://localhost:4000/img/ui-project/IMG_0048.JPG" alt="Image Carousel" /></p>
+
+<p>I was inflexible about having an infinite loop for the carousel. A <code class="highlighter-rouge">Carousel</code> class and a <code class="highlighter-rouge">CarouselCard</code> class were created to complete the task. The Carousel itself handles the heavy-lifting. It handles the order of the cards and the click handling. The <code class="highlighter-rouge">CarouselCard</code>s are really just for presentational purposes.</p>
+
+<p>The Header and Navigation system are still being improved. I admit I am not a master of GreenSock, but I love how smooth and clean the transitions are for the platform. The navigation successfully opens and closes like a drawer. The only thing I want to change is how the navigation items appear. I’d like it better if the drawer transitioned as a whole. Currently, the menu items to shift around on each transition.</p>
+
+<p>The Hero area is my favorite area on each page. Most likely because it took the most time in the CSS stage. Or it could be the professional tone that it sets off. It’s such a simple, subtle animation over a picture that sets off a professional tone for the page. I used GreenSock to get this animation up and running.</p>
+
+<p><img src="http://localhost:4000/img/ui-project/IMG_0050.JPG" alt="Tabbed Cards" /></p>
+
+<p>The tabbed card logic was split by Link and Card. Every <code class="highlighter-rouge">TabLink</code> is attached to a corresponding <code class="highlighter-rouge">TabCard</code>. The <code class="highlighter-rouge">TabLink</code> handles the click handling.  When a tab is clicked, all the cards are checked for the <code class="highlighter-rouge">.active-tab</code> CSS class. Once there are no cards shown, the tab’s card is then given the <code class="highlighter-rouge">.active-tab</code> class and displayed on the screen.</p>
+
+<h3 id="looking-ahead-">Looking Ahead …</h3>
+
+<p>I am proud of this project! My web development skills were pushed to the next level. However, I see a few tweaks for the near future. The assignment has a few stretch goals I want to complete. These changes extend the website with a couple pages for ‘About Us’ and ‘Projects’. Most of the updates I have are centered around transitions. I want to clean up the navigation drawer as I mentioned above. My goal is to have the drawer items to transition without the extra shifting. I also want to smoother transitions on the carousel and tabbed cards. The current version is bland.</p>
+
+<p>Thank you so much for checking out this project. There are many more surprises and projects on the horizon. Stay tuned.</p>
+
+<p>~Trai Lynne;</p>
+
+<h2 id="resources">Resources</h2>
+<ul>
+  <li><a href="http://lesscss.org/" taget="_blank">LESS</a></li>
+  <li><a href="https://www.javascript.com/" target="_blank">JavaScript</a></li>
+  <li><a href="https://greensock.com/" target="_blank">GreenSock</a></li>
+</ul>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/project/2018/07/11/interactive_clock_project.html" data-toggle="tooltip" data-placement="top" title="Interactive Clock">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/challenge/2019/08/10/sock_merchant_challenge.html" data-toggle="tooltip" data-placement="top" title="Sock Merchant Challenge">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:TraiLynne@Gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/trai-lynne-compton">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Trai Lynne Compton 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/blog/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/blog/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/blog/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148153648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148153648-1');
+</script>
+
+
+
+</body>
+
+</html>

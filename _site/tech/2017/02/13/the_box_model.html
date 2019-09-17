@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    The Box Model - Trai Lynne
+    
+  </title>
+
+  <meta name="description" content="Did you know that every single element on a web page is held within it’s own personal box? From the headline to the paragraphs to the pictures posted, each h...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/tech/2017/02/13/the_box_model.html">
+  <link rel="alternate" type="application/rss+xml" title="Trai Lynne" href="/blog/feed.xml">
+
+  <link rel="shortcut icon" href="/blog/img/logo.jpg" type="image/x-icon" />
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://www.trailynne.org"><img src='/blog/img/logo.jpg' style="width: auto; height: 30px"/> Trai Lynne</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>The Box Model</h1>
+            
+            <span class="meta">Posted by
+              <a href="#">Trai Lynne Compton</a>
+              on February 13, 2017 &middot; <span class="reading-time" title="Estimated read time">
+  
+   4 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>Did you know that every single element on a web page is held within it’s own personal box? From the headline to the paragraphs to the pictures posted, each has it’s own personal box. An elements box is composed of 4 areas – content, padding, border, and margin.</p>
+
+<p>Most of us have moved at least once in our life. We had to deal with the tedious task of packing up our current home in order to easily relocate our possessions to our new home. Most of the time, we pack similar items together, bathroom stuff with bathroom stuff, bedroom with bedroom, kitchen, etc. This is how a site is also set up, similar items are grouped together in order to maintain organization.</p>
+
+<p>We are currently packing up the last room, the kitchen. In the kitchen, we have very fragile items. We can place them in a box and ship them out, however this would not be the most ideal move. We don’t want our dishes to break before we have a chance to use them in the new house. Let’s compare a box o dishes to an element bx on a website.</p>
+
+<p>So let’s begin by thinking of the dishes as the content. The dishes are the actual important part that we are concerned about and will be utilized by a user later. We place the dishes in the box, just as a headline is placed inside it’s own box. Since we do not want the dishes to break, we place newspaper or bubble wrap around the dishes inside the box. This will keep the contents inside from being right on the side of the box. The newspaper/bubble wrap provides room around the content but inside the box just as with padding in a web element. Padding assist with the readability of the content on a web page, not so much with making sure the fragile contents don’t break.</p>
+
+<p>Next we have the border, which is the actual box we used to put the dishes in. While the border is very obvious in our example, a brown cardboard box, this is not always the case on a web page. The border is what wraps around the content and padding however the border is usually invisible. A visible border is not required however the border is always there.</p>
+
+<p>Lastly, we have the margin. The margin is the area outside the box. This is the space that separates one element box from the next so they do not bump into each other.</p>
+
+<p>So lets review:</p>
+<ul>
+  <li>content = dishes</li>
+  <li>padding = newspaper/bubble wrap around dishes</li>
+  <li>border = cardboard box</li>
+  <li>margin = area outside of the box</li>
+</ul>
+
+<p>Now there is something very important to understand about the box model. The margin, border, and padding may either be added to the size of the element or included in the size of the element. This can be manipulated by the box-sizing property. If box sizing is set to border-box, any units of measurement added for padding, border, and margin will add to the actual size of the box. Lets say we set the width of the element to 200px. If we set the border is 1px and the padding and margin is set to 20px on the left and right sides, all these values are then added to the size of the element. Instead of just being 200px wide, the element is now 282px wide. On the other hand, if the box-sizing is set to content-box, the additional values will not increase the width of the box. The set width of 200px will remain 200px regardless of the added border, padding and margin widths.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/personal/2017/01/16/enough_is_enough.html" data-toggle="tooltip" data-placement="top" title="Enough is Enough">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/2017/03/05/my_love_hate_thing_for_regex.html" data-toggle="tooltip" data-placement="top" title="My 'Love Hate Thing' for RegEx">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:TraiLynne@Gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/trai-lynne-compton">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Trai Lynne Compton 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/blog/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/blog/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/blog/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148153648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148153648-1');
+</script>
+
+
+
+</body>
+
+</html>

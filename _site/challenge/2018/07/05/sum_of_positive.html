@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Sum of Positive - Trai Lynne
+    
+  </title>
+
+  <meta name="description" content="As a CodeWars beta member, I just completed training on the “Sum of positive” kata. Take the initiation to join me and start training too!">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html">
+  <link rel="alternate" type="application/rss+xml" title="Trai Lynne" href="/blog/feed.xml">
+
+  <link rel="shortcut icon" href="/blog/img/logo.jpg" type="image/x-icon" />
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://www.trailynne.org"><img src='/blog/img/logo.jpg' style="width: auto; height: 30px"/> Trai Lynne</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Sum of Positive</h1>
+            
+            <h2 class="subheading">A Programmers Mind Decoded</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Trai Lynne Compton</a>
+              on July 05, 2018 &middot; <span class="reading-time" title="Estimated read time">
+  
+   4 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>As a CodeWars beta member, I just completed training on the “Sum of positive” kata. <a href="www.codewars.com/r/driA8A">Take the initiation</a> to join me and start training too!</p>
+
+<p>If you are a member already <a href="http://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript">click here</a> to train on “Sum of positive”.</p>
+
+<h1 id="training-language">Training Language</h1>
+
+<ul>
+  <li>JavaScript</li>
+</ul>
+
+<h1 id="description">Description</h1>
+
+<p>An array of numbers is passed into a function. The return is the sum of all of the positive numbers. If there is nothing to add, the default sum is set to zero ( 0 ). 
+Example [1, -4, 7, 12] =&gt; 1 + 7 + 12 = 20</p>
+
+<h1 id="decomposition">Decomposition:</h1>
+
+<p>Break the problem down into small, manageable steps. Why? Because a few smaller problems are easier to solve than one huge one. Once each small step is taken care of, before you know it, the big task is complete.</p>
+
+<ol>
+  <li>Set the initial value of the sum to zero (0).</li>
+  <li>Collect the first element in the array
+    <ul>
+      <li>if the value is greater than 0
+        <ul>
+          <li>add the value to the sum</li>
+          <li>move on to the next element</li>
+        </ul>
+      </li>
+      <li>if the value is less than 0
+        <ul>
+          <li>move on to the next element</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Repeat step 2 until all elements have been evaluated</li>
+</ol>
+
+<h1 id="abstraction">Abstraction:</h1>
+
+<p>Cut the clutter. Determine what is absolutely necessary to solve the problem.</p>
+
+<ul>
+  <li>Input of numbers</li>
+  <li>Output of sum</li>
+</ul>
+
+<h1 id="pattern-recognition">Pattern recognition:</h1>
+
+<p>Developers love DRY code. DRY meaning Don’t Repeat Yourself. Is there any step that is being repeated? These usually lead to great functions or loops.</p>
+
+<ul>
+  <li>Determine if a value is positive or negative</li>
+  <li>Add positive integers to the sum</li>
+</ul>
+
+<h1 id="pseudocode">Pseudocode</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SET  VARIABLE sum TO default 0   
+LOOP input array 
+  IF array element IS &gt; 0 
+    ADD array element value TO sum value 
+END LOOP 
+RETURN sum value 
+</code></pre></div></div>
+
+<h1 id="my-final-solution">My Final Solution</h1>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function positiveSum(arr) {
+  for(var i = 0 , sum = 0 ; i &lt; arr.length ; i++){
+    if( arr[i] &gt; 0 ){
+      sum = sum + arr[i]
+    }
+  }    
+  return sum;
+}
+</code></pre></div></div>
+
+<p>ALL TESTS PASSED! YAY!</p>
+
+<h1 id="what-did-i-learn">What did I learn?</h1>
+
+<p>So, whenever I complete a challenge, I look through others’ solutions for anything I can improve upon. This time around, I learned there are 2 functions that complete the job, JavaScript filter() &amp; reduce() functions. My solution could be completely rewritten WITHOUT a loop. I admit, I like the refactored version better, although both are great and get the job done.</p>
+
+<h2 id="refactored-solution">Refactored Solution</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function positiveSum (arr) {
+  return arr.filter(x =&gt; x &gt; 0).reduce((a, b) =&gt; a + b, 0);
+}
+</code></pre></div></div>
+
+<h3 id="filter">filter()</h3>
+
+<p>JavaScript filter() returns an array containing all the array elements that pass a test given as a function. Some important things to note about filter():</p>
+<ul>
+  <li>it will not execute on an empty array</li>
+  <li>it does not change the original array.</li>
+</ul>
+
+<p>So this step is where all the negative integers are removed and an array of only positive integers (if any) is returned.</p>
+
+<p>For more information on JavaScript filter() function, check it out <a href="https://www.w3schools.com/jsref/jsref_filter.asp">here</a> on W3 Schools.</p>
+
+<h3 id="reduce">reduce()</h3>
+<p>JavaScripts reduce() function reduces an array to one value. It goes through each element of the attached array from left to right an executes the provided function on each. It returns an accumulator which is just fancy for a result or total. An important thing to note about reduce():</p>
+<ul>
+  <li>it does not execute on an empty array.</li>
+</ul>
+
+<p>This is where the positive elements in the array returned by the filter() function are added together.</p>
+
+<p>For more information on JavaScript reduce() function, check it out <a href="https://www.w3schools.com/jsref/jsref_reduce.asp">here</a> on W3 Schools.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/project/2018/06/27/jubilee_austen.html" data-toggle="tooltip" data-placement="top" title="Jubilee Austen">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/challenge/2018/07/11/find_the_middle_element.html" data-toggle="tooltip" data-placement="top" title="Find the Middle Element">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:TraiLynne@Gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/trai-lynne-compton">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Trai Lynne Compton 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/blog/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/blog/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/blog/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148153648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148153648-1');
+</script>
+
+
+
+</body>
+
+</html>

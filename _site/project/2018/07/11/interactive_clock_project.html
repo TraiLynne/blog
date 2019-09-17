@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Interactive Clock - Trai Lynne
+    
+  </title>
+
+  <meta name="description" content="This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html">
+  <link rel="alternate" type="application/rss+xml" title="Trai Lynne" href="/blog/feed.xml">
+
+  <link rel="shortcut icon" href="/blog/img/logo.jpg" type="image/x-icon" />
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://www.trailynne.org"><img src='/blog/img/logo.jpg' style="width: auto; height: 30px"/> Trai Lynne</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Interactive Clock</h1>
+            
+            <h2 class="subheading">Sample Project</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Trai Lynne Compton</a>
+              on July 11, 2018 &middot; <span class="reading-time" title="Estimated read time">
+  
+   5 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.</p>
+
+<p><img src="http://localhost:4000/img/interactive-clock.JPG" alt="Project ScreenShot" /></p>
+
+<h1 id="languages">Language(s)</h1>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+
+<h1 id="links">Links</h1>
+<ul>
+  <li><a href="https://github.com/TraiLynne/clock-project">GitHub</a></li>
+  <li><a href="https://codepen.io/TraiLynne/full/PBwgym/">CodePen</a></li>
+</ul>
+
+<p>Visually, this looks like a fairly simple project right? Wrong! Under the hood, there is a lot is going on.</p>
+
+<h1 id="htmlcss">HTML/CSS</h1>
+
+<p>The visual aspects of the page were pretty easy to handle. Basic HTML elements were used for the most part such as a header, image, and a few paragraph tags.</p>
+
+<p>In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked.  The times are split into hour intervals.</p>
+
+<p>A ‘button’ element is used to create the “Party Time” option. This button is used to toggle an override of the picture and message shown when it’s time to have fun.</p>
+
+<p>Initially, placeholders are used for the time, image and message that is displayed. JavaScript is used to customize the placeholders.</p>
+
+<h1 id="javascript">JavaScript</h1>
+<p>JavaScript is where the interactivity occurs. There’s a lot going on but I will keep the focus on the major jobs that JavaScript is accomplishing in this project.</p>
+
+<p>First off, we have the updateClock function that is used for the real fun. It is a huge sentence basically telling my program if this happens, then do that or else if something else happens, do something else. It is an easy way to tell the clock what message and image to display based on the hour of the day.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var updateClock = function() {
+    // IF/ELSE statement controls photo and message displayed
+    if (time == partyTime) {
+        messageText = "Let's Get this Party Started!";
+        imageSource = "...";
+    } else if (time == napTime) {
+        messageText = "Let's get some sleep";
+        imageSource = "...";
+     } else if (time == lunchTime) {
+         messageText = "It's Lunch Time!!";
+         imageSource = "....";
+    } else if (time == wakeupTime) {
+        messageText = "Wake up and make it happen.";
+        imageSource = "...";
+    } else if (time &lt; noon) {
+        messageText = "Good Morning!";
+        imageSource = "...";
+    } else if (time &gt; evening) {
+        messageText = "Good Evening!";
+        imageSource = "...";
+    } else {
+        messageText = "Good Day!";
+        imageSource = "...";
+    }
+}
+</code></pre></div></div>
+
+<p>Next, I wanted the time of day to be displayed in real time in normal language. When displaying the time with JavaScript, it displays military language. Don’t get me wrong, I actually use military time a lot, but not everyone has it memorized or likes to do the math. Instead, i used JavaScript to do the math for me. I also used the setInterval function to update the clock every second. It keeps the user from having to press refresh repeatedly.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var showCurrentTime = function() {
+    // display the string on the webpage
+    var clock = document.getElementById("clock");
+    var currentTime = new Date();
+    
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var meridian = "AM";
+    
+    // Set hours
+    if (hours &gt;= noon) {
+      meridian = "PM";
+    }
+    
+    if (hours &gt; noon) {
+        hours = hours - 12;
+    }
+    
+    // Set Minutes
+    if (minutes &lt; 10) {
+        minutes = "0" + minutes;
+    }
+    
+    // Set Seconds
+    if (seconds &lt; 10) {
+        seconds = "0" + seconds;
+    }
+    
+    // put together the string that displays the time
+    var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian + "!";
+    
+    clock.innerText = clockTime;
+};
+
+setInterval(updateClock, oneSecond);
+</code></pre></div></div>
+
+<p>Lastly, is the Party Time Button. JavaScript is used to change multiple elements on the page when the Party TIme button is pressed. Some things you notice that change are the picture and message displayed as well as the button itself. Did you notice that it switches between “Party Time” and “Party Over”?</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//- Changes Button upon Pressing
+var partyEvent = function() {
+    if (isPartyTime === false) {
+        isPartyTime = true;
+        time = partyTime;
+        partyTimeButton.innerText = "Party Over";
+        partyTimeButton.style.backgroundColor = "#0A8DAB";
+    } else {
+        isPartyTime = false;
+        time = new Date().getHours();
+        partyTimeButton.innerText = "PARTY TIME!";
+        partyTimeButton.style.backgroundColor = "#222";
+    }
+};
+</code></pre></div></div>
+
+<p>From there, it’s all about having JavaScript listen for the right event so the page can be updated correctly. A few even listeners added were any changes made to the time selectors for waking up, lunch, and nap time. We also needed it to watch out for that Party Time button to be clicked.</p>
+
+<p>Ta-Da !! The interactive clock is ready for action.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/challenge/2018/07/11/find_the_middle_element.html" data-toggle="tooltip" data-placement="top" title="Find the Middle Element">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/project/2019/02/06/user_interface_project.html" data-toggle="tooltip" data-placement="top" title="S&J Architects">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:TraiLynne@Gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/trai-lynne-compton">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Trai Lynne Compton 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/blog/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/blog/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/blog/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148153648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148153648-1');
+</script>
+
+
+
+</body>
+
+</html>

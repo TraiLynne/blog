@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>
+    Story of My Life - Trai Lynne
+    
+  </title>
+
+  <meta name="description" content="For the Rails App with a jQuery Front End project, the instructions were to extend the functionality of my Rails project. I was asked to add dynamic features...">
+
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Gaegu|Hi+Melody&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/vendor/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="/blog/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/project/2017/07/22/story_of_my_life_pt_2.html">
+  <link rel="alternate" type="application/rss+xml" title="Trai Lynne" href="/blog/feed.xml">
+
+  <link rel="shortcut icon" href="/blog/img/logo.jpg" type="image/x-icon" />
+</head>
+
+
+<body>
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="https://www.trailynne.org"><img src='/blog/img/logo.jpg' style="width: auto; height: 30px"/> Trai Lynne</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/posts">Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Page Header -->
+
+  <header class="masthead">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Story of My Life</h1>
+            
+            <h2 class="subheading">Part 2</h2>
+            
+            <span class="meta">Posted by
+              <a href="#">Trai Lynne Compton</a>
+              on July 22, 2017 &middot; <span class="reading-time" title="Estimated read time">
+  
+   7 mins  read </span>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        <p>For the Rails App with a jQuery Front End project, the instructions were to extend the functionality of my Rails project. I was asked to add dynamic features using jQuery and JSON.</p>
+
+<h2 id="rendering-index-page">Rendering Index Page</h2>
+<p>My Rails application only had one index template for chapters, so it was pretty easy to decide which models index would be rendered using jQuery and JSON.</p>
+
+<p>Previously, when the user logged in, they would be presented with the homepage. On the homepage, underneath the random quote generated, was an unordered list containing two links for creating a new story and viewing the current stories created by the logged in user. When the user clicked either link, they would be led to a completely different screen. Upon learning jQuery, I saw how pointless this actually was.</p>
+
+<p>Now, when the user clicks the link to view their current stories, the homepage will display this list of books in place of the link. I used an Ajax request to GET the index page of books. Upon a successful response, the link is replaced with the list of the books displayed as links to each book show template.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># welcome/home.html.erb
+
+&lt;div id='bookshelf'&gt;
+      &lt;a href='/books' class='link'&gt;View Bookshelf&lt;/a&gt;
+&lt;/div&gt;
+
+
+# welcome.js
+
+$(function(){
+    $('#bookshelf .link').on('click', function(e) {
+        $.get(this.href).success(function(resp){
+            $('#bookshelf').html(resp);
+        });
+        e.preventDefault();
+    });
+});
+</code></pre></div></div>
+
+<h2 id="rendering-new-creation">Rendering New Creation</h2>
+<p>I decided that I would render a newly created entry under the form using jQuery instead of being automatically directed to the entry’s show page.</p>
+
+<p>In order to make this happen, I added a div right under the form of the New template to hold the information created. Using jQuery, the default action of form submission is halted. In normal circumstances, pressing submit on the form would automatically send a direct to a new page. Instead, the data entered into the forms is serialized and a request is made to the Create controller action. The controller actions render the JSON information and present the browser with a 201 status. The 201 tells the browser that everything is ok and the new entry was created. Once the browser knows everything is ok, the JSON presented in the response fills in the empty div under the form.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># entries.js
+
+$('form').submit(function(event) {
+		event.preventDefault();
+			
+		var values = $(this).serialize();
+		var entry = $.post('/entries', values);
+			
+		entry.done(function(resp) {
+			$('#entryMood').text(resp["mood"]);
+			$('#entryContent').text(resp["content"]);
+		});
+});
+
+# entries_controller.rb
+
+def create
+    @entry = Entry.new(entry_params)
+
+    if @entry.valid?
+      @entry.save
+
+      render json: @entry, status: 201
+    else
+      render :new
+    end
+end
+
+# entries/new.html.erb
+
+&lt;%= form_for(@entry) do |f| %&gt;
+  &lt;% if @entry.errors.any? %&gt;
+    &lt;div id="error_explanation"&gt;
+      &lt;h2&gt;
+        &lt;%= pluralize(@entry.errors.count, "error") %&gt; prohibited the creation of this Important Date:
+      &lt;/h2&gt;
+
+      &lt;ul&gt;
+        &lt;% @entry.errors.full_messages.each do |m| %&gt;
+          &lt;li&gt;&lt;%= m %&gt;&lt;/li&gt;
+        &lt;% end %&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;% end %&gt;
+
+  &lt;%= f.hidden_field :page_id %&gt;
+
+  &lt;div class="field"&gt;
+    &lt;%= f.label :mood %&gt;
+    &lt;%= f.text_field :mood %&gt;
+  &lt;/div&gt;
+
+  &lt;div class="field"&gt;
+    &lt;%= f.label :content %&gt;
+    &lt;%= f.text_area :content %&gt;
+  &lt;/div&gt;
+
+  &lt;div class="action"&gt;
+    &lt;%= f.submit %&gt;
+  &lt;/div&gt;
+&lt;% end %&gt;
+
+&lt;div id='entry-results'&gt;
+  &lt;h4 id='entryMood'&gt;&lt;/h4&gt;
+  &lt;p id='entryContent'&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+</code></pre></div></div>
+
+<h2 id="rendering-show-page">Rendering Show Page</h2>
+<p>As far as rendering a show page using jQuery, I decided to continue using the EntryModel. I added a ‘Prev’ and ‘Next’ button to the Show template so a user can go between entries without going through a bunch of hoops. Each button received a class in order to easily add an event listener.</p>
+
+<p>JQuery was then used to attach an event listener to make an ajax request once either button was clicked. A variable is first created containing the id collected from the attribute ‘data-id’ and added or subtracted by 1, depending on which direction the user navigates through the entries.</p>
+
+<p>After collecting and increasing the id, an ajax request is made to the specified entry’s JSON page (/entries/:id.json). Instead of going to an entirely new page, the JSON from the response is parsed and replaces the entry data that was previously. All while staying on the same page. This creates a dynamic experience for the user and a more friendly navigation.</p>
+
+<p>However, I am still a little tripped up behind this method. I’m still trying to figure out how the user can navigate through the entries when the IDs will not always be in numerical order…</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># entries/show.html.erb
+
+&lt;a href="#" class="js-prev" data-id="&lt;%=@entry.id%&gt;"&gt;Prev&lt;/a&gt;
+&lt;a href="#" class="js-next" data-id="&lt;%=@entry.id%&gt;"&gt;Next&lt;/a&gt;
+
+# entries.js
+
+$(".js-next").on("click", function() {
+		var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+		$.get("/entries/" + nextId + ".json", function(resp) {
+			$(".entryTime").text(resp["time"]);
+			$(".entryMood").text(resp["mood"]);
+			$(".entryContent").text(resp["content"]);
+			
+			$(".js-next").attr("data-id", resp["id"]);
+		});
+
+});
+	
+$(".js-prev").on("click", function() {
+		var lastId = parseInt($(".js-prev").attr("data-id")) - 1;
+		$.get("/entries/" + lastId + ".json", function(resp) {
+			$(".entryTime").text(resp["time"]);
+			$(".entryMood").text(resp["mood"]);
+			$(".entryContent").text(resp["content"]);
+			
+			$(".js-prev").attr("data-id", resp["id"]);
+		});
+
+});
+</code></pre></div></div>
+
+<h2 id="relationships-shown-in-json">Relationships shown in JSON</h2>
+
+<p>Books have many chapters. A book also has many pages through chapters. In order to show this relationship, I used the Active Model Serializer gem to create serializers for books, chapters, pages, and entries. I honestly created them for important dates and entries as well just in case I need them a future.</p>
+
+<p>Within the serializer files, I added each model’s attributes as well as their relationship with each other. This allows the JSON when rendered in the browser, to show the many chapters and pages for a book and the book that each page or chapter belongs to.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># book_serializer.rb
+
+class BookSerializer &lt; ActiveModel::Serializer
+  attributes :id, :title, :quote
+  
+  has_many :chapters
+  has_many :pages
+end
+
+# chapter_serializer.rb
+
+class ChapterSerializer &lt; ActiveModel::Serializer
+  attributes :id, :title, :main_focus
+  
+  belongs_to :book
+  
+  has_many :pages
+  has_many :important_dates
+end
+
+# page_serializer.rb
+
+class PageSerializer &lt; ActiveModel::Serializer
+  attributes :id, :page_number, :date, :quote, :thank_you, :lesson_learned
+  
+  belongs_to :chapter
+  
+  has_many :entries
+  has_many :tasks
+end
+
+</code></pre></div></div>
+
+<h3 id="well-thats-all--for-now">Well, that’s all … for now.</h3>
+
+<p>I am far from complete with this project. I am going to continue to build on. This is one project I don’t think I will ever be completely done with. I am always willing to accept contributions and suggestions. Check out the repo <a href="https://github.com/TraiLYNNE/story-of-my-life-js-version">here</a>.</p>
+
+
+        <hr>
+
+        <div class="clearfix">
+
+          
+          <a class="btn btn-primary float-left" href="/blog/project/2017/05/21/story_of_my_life.html" data-toggle="tooltip" data-placement="top" title="Story of My Life">&larr; Previous<span class="d-none d-md-inline">
+              Post</span></a>
+          
+          
+          <a class="btn btn-primary float-right" href="/blog/project/2017/07/30/story_of_my_life_pt_3.html" data-toggle="tooltip" data-placement="top" title="Story of My Life">Next<span class="d-none d-md-inline">
+              Post</span> &rarr;</a>
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          
+          <li class="list-inline-item">
+            <a href="mailto:TraiLynne@Gmail.com">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/trai-lynne-compton">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+          
+          <li class="list-inline-item">
+            <a href="https://github.com/TraiLynne">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+
+          
+          <li class="list-inline-item">
+            <a href="https://instagram.com/">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Trai Lynne Compton 2019</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="/blog/assets/vendor/jquery/jquery.min.js"></script>
+<script src="/blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/blog/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
+
+<script src="/blog/assets/scripts.js"></script>
+
+
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148153648-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148153648-1');
+</script>
+
+
+
+</body>
+
+</html>

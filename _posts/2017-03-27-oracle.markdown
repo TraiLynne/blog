@@ -1,0 +1,191 @@
+---
+layout: post
+title:  "Oracle"
+subtitle: Project
+date:   2017-03-27 19:34:07 +0000
+category: project
+---
+
+Getting Started:
+The very first step I took when entering into my Command Line Interface (CLI) Gem Final Project was to watch the walk-through Avi recorded. I’m very happy I decided to watch the walk-through instead of jumping in to my project. I completely agree with Avi when he states that one of the scariest things to see as a programmer is a blank file. While it can be scary, it is also exciting. I had unlimited freedom on what I could do with my CLI Project. This wasn’t a pre-designed lab created for practice, this was going to all come from my mind.
+
+For a day or two, I tossed around ideas in my head regarding what I subject wanted to base my CLI Final Project on. I have journals for everything, so I decided to create a Web Development journal to jot down any random ideas that populate in my mind and for planning projects. As I narrowed down my list and a Superhero theme became my focus. Now that I knew the subject, I had to decide what I wanted my CLI to do. 
+
+At first, I went a little overboard. I wanted to incorporate the DC Universe and the Marvel Universe. I wanted my program to display a list of 4 options that would split each universe into heroes, villains, teams, and locations. From this list of options, the user would select a category, and a new list would appear of specified characters and locations. Once the user picks a specific option, the details will be displayed on the screen. 
+
+I realized I was doing a little too much when I started making flow charts of how I wanted my menu to work and how I wanted my classes to interact with one another. It wasn’t that my idea was impossible, I was just pressuring myself to do so much in so little time and expecting it to be perfect. I took a step back and thought this through. Then I dawned on me; I do not have to do this all at once. “Excellence, not excess, is the key.” Applications go through updates all the time making new features available to their users. I can still build up to my goal, however, for now, I wanted to just focus on one part of this dream program. I did a little more narrowing down and decided I wanted to focus my application on the Justice League of the DC Universe. From there, light bulbs kept going off and my favorite hero of all time just happens t be a core member of the Justice League, Batman, king of technology. I kept going with the idea of basing the application off of an application the Black Knight himself may use. Another epiphany, ‘Oracle’! Batgirl became Oracle, a Tech Baddie, after she was paralyzed by the Joker. I wanted the user to act as Batman talking to Oracle to get information about a hero, including himself. Everything was coming together. 
+
+After running my opening command, ‘bundle gem oracle’, a new folder was set up, named ‘oracle’ of course. Within my root folder, I created a new file: notes.md. I began jotting down my ideas and little notes I wanted to remember to include in my program. I also used this file as a checklist to ensure my program was doing everything I expected of it as I went along. This file was consistently updated as I built up my Oracle CLI. 
+
+Bin-File Branch:
+The first file I created and worked on was my bin/oracle file. Running the ‘bundle gem’ command creates a file named bin/console. I honestly copied the shebang line and requirements from the bin/console file into my custom bin/oracle file. I also placed a test line to run in my terminal to make sure everything is being called correctly. “Hello World”
+
+One tip that Avi repeated a few times, is that he likes to write the code he wish he had. So he writes the code to call certain methods that will run the program then he defines the method and adds the logic. I followed his lead for my project. I added one line to my bin/oracle file:
+	
+	Oracle::CLI.new.call
+	
+Avi stated that this file is to be as minimal as possible. There should be no logic within the bin directory file. The requirements should only be out of necessity and the shebang line tells the program which interpreter to use when running the program.
+
+Environment Branch: 
+
+For my environment file, I used the file created by my ‘bundle gem’ command, lib/oracle.rb. Here I added an additional requirement of ‘oracle/cli’. I created a new file, lib/oracle/cli.rb, and d defined a new class, Oracle::CLI. Within my new class, I defined a method named #CALL. I had my #CALL method output the string “Hello World” to test and make sure my new class and my bin file were appropriately connected via my environment. I tested my program via my terminal and proudly displayed “Hello World”. Everything was coming together nicely.
+
+CLI Branch:
+
+In my CLI, I followed a pattern of writing the logic within my #CALL method, then encapsulating the logic within its own method to be called via the #CALL method.
+
+The first interaction I wanted my user to encounter was putting in a password. I made the password super obvious, Batman’s secret identity. I created a variable ‘pw_input’ and set it equal to user input. I used an IF statement stating that if the input was not “Bruce Wayne” (case sensitive), the program would output “Password Error”. I encapsulated all the logic into a method named #PASSWORD and called my new method in my #CALL method. I tested my program via the terminal and successfully raised the error and input the correct password. However, I realized that as soon as I put in the incorrect password, the program would output “Password Error”, but that was all. It did not ask for input again. To fix this, I called my #PASSWORD method within its own IF statement after the program is asked to output “Password Error.”
+	
+    def password
+	    puts "Please enter your secret identity:"
+	    pw_input = STDIN.noecho(&:gets).chomp
+	    if pw_input != "Bruce Wayne"
+	      puts "PasswordError" #Define later
+	      password
+	    end
+    end
+	
+Now that the user could put in a password, I had to figure out what I wanted to happen next. From here, the user is to be presented with a list of options to choose from. Each option was to be a hero from the HeroClass that can be called to display details about the hero. Avi taught me a trick about ‘.with_index’. I knew that I would be defining an @@all Array within my hero class that would hold each instance of the class that would be created. I used iteration to go through my Hero.all array and display each option along with it’s index number increased by 1. I encapsulated the logic within a method named #LIST_OPTIONS. To test my logic, I called a fake array into the method. When I successfully displayed the arrays elements, I adjusted the logic of the method to call the ‘Hero.all’ array instead of an array pushed in as an argument.
+	
+    def list_options
+	    puts "Here are your allies:"
+	    Hero.all.each.with_index {|a,i| puts "#{i+1}. #{a.current_alias}"}
+    end
+	
+Lastly, I needed to create logic for navigating the menu. First, I output strings asking for input from the user and providing the options available for input. I set a variable named ‘input’ equal to user input. A case statement was used to deliver the results based on the input. If ‘list’ was input by the user, #LIST_OPTIONS would be called followed by asking for input again. If ‘done’ was input by the user, a farewell message would be displayed and the program would be exited. These were the only 2 words I wanted the user to be able to use. From here, I stated that if any other input was provided by the user, it is to be converted into an integer and would select the hero with the corresponding index number minus 1. I had to decide whose responsibility it was to display the details of each hero. I decided that the instance of the HeroClass being called would be responsible with displaying it’’s details and the Oracle::CLIClass will be responsible for calling the hero to display it’s information.
+	
+    def select_option
+	    puts "Who would you like more information about?"
+	    puts "(Select a number, say 'list', or 'done')"
+	    input = gets.chomp
+	    case input
+	    when "list"
+	      list_options
+	      select_option
+	    when "done"
+	      puts "Right then. Back to work"
+	    else
+	      Hero.all[input.to_i - 1].display_details
+	      select_option
+	    end
+    end
+
+HeroClass Branch:
+
+Now that I had the basics of my CLIClass together, I needed to get to work on my HeroClass. I created a new file, lib/oracle/hero.rb. I updated my environment file, lib/oracle.rb, to require my new hero.rb file.
+
+I created finally created my @@all array and it’s reader method as well as a few ‘attr_accessor’s to get started. I then defined my #INITIALIZE method. My favorite #INITIALIZE method is the one that iterates through a hash and sends each key into an ‘equal to’ method and the key value is used as an argument for the ‘equal to’ method. The new hero is then pushed into the @@all array to be listed on the menu
+	
+    #attributes and variables
+	  attr_accessor :real_name, :current_alias, :affiliation, :boo, :identity, :citizenship, :marital_status, :occupation, :gender, :eyes, :hair, :universe, :pob
+	  @@all = Array.new
+	
+
+	  #initialize
+	  def initialize (hero_details)
+	    hero_details.each{|k,v| self.send(("#{k}="), v)}
+	    self.class.all << self
+	  end
+	
+
+	
+
+	  #class methods
+	  def self.all
+	    @@all
+	  end
+    
+The only other method needed for my HeroClass was an instance method for displaying details. Since the name of the method was already stated in my CLI, I just needed to define the #DISPLAY_DETAILS method in my hero class and add the logic. This method ended up being a number of strings with many of them using string interpolation of the attr_accessor values. 
+	
+    #instance methods
+	  def display_details
+	    puts "#{current_alias}"
+	    puts "Basic Information"
+	    puts "Real Name: #{real_name}"
+	    puts "Alias: #{current_alias}"
+	    puts "Affliation: #{affiliation}"
+	    puts "Base of Operation: #{boo}"
+	    puts "--------------"
+	    puts "Status:"
+	    puts "Identity: #{identity}"
+	    puts "Citizenship: #{citizenship}"
+	    puts "Marital Status: #{marital_status}"
+	    puts "Occupation: #{occupation}"
+	    puts "--------------"
+	    puts "Characteristices"
+	    puts "Gender: #{gender}"
+	    puts "Eyes: #{eyes}"
+	    puts "Hair: #{hair}"
+	    puts "--------------"
+	    puts "Origin:"
+	    puts "Universe: #{universe}"
+	    puts "Place of Birth: #{pob}"
+	  end
+
+ScraperClass Branch:
+
+I did fumble a little bit with my ScraperClass. I required my new lib/oracle/scraper.rb file, ‘nokogiri’ and ‘open-uri’ in my environment file and created the logic needed to scrape the site for my CLI: dc.wikia.com/wiki. Nothing was happening. I was receiving error messages and could not figure out what to do to fix the problem. *oops, I forgot to run ‘bundle install’ in my terminal* Once I recovered, I was able to easily process my next steps. Thankfully, the CSS selector holding all of the information I wanted to scrape was the ‘aside’. All my keys for the hash would be the ‘h3’ css selectors and the values would be the text of the div after each ‘h3’. This seemed simple enough. Then it hit me, the ‘h3’ had capital letters and a space between each word if there were multiple words. I could not just have these turned into keys. There was a little more work that needed to be done.
+
+I started with my initialize method. From the beginning, I told myself that the only input I wanted the user to provide when instantiating a ScraperClass instance was the end of the URL. Every hero would be coming from the same site, so the only difference was the end of the URL. I have taken the golden rule of programmers being lazy. I knew no one would want to have to enter the entire URL each time a hero is being created. I set an attr_accessor of :url_ending which would be pushed into the #INITIALIZE method. String interpolation would then be used to apply the value of @url_end to a new variable named @url which would end up equaling the full url.  
+	
+    def initialize(url_ending)
+	    @url = "http://dc.wikia.com/wiki/#{url_ending}"
+    end
+
+In my instance method #SCRAPE_SITE, I mixed Nokogiri, Open-URI, and string interpolation to scrape the given site. From here the ‘h3’ css selectors would go into an array names @change_to_symbols (which was also provided an attr_accessor of its own). The values were also pushed into an array of their own named @values.
+def scrape_site
+	    
+    def scrape_site
+	    character_page = Nokogiri::HTML(open(@url))
+	
+
+	    @change_to_symbols = character_page.css('aside .pi-data').collect {|sym| sym.css('h3').text}
+	
+
+	    @values = character_page.css('aside .pi-data').collect {|val| val.css('.pi-data-value').text}
+    end
+	
+I then defined my #CREATE_KEYS method. This method took in the @change_to_symbols array and split each element of multiple words by the space between the words. Each word would then be down cased to ensure all the letters were lowercase. Finally, elements with multiple words were joined together with an underscore between the words and pushed into a new array named @symbols.
+    
+    def create_keys
+	    @symbols = @change_to_symbols.collect do |sym|
+	      sym.split(" ").each{|word| word.downcase!}.join("_").to_sym
+	    end
+    end
+
+I had my values and my keys, now I had to create the hash of the hero information. This method tripped me up in trying to figure out what to do, what array should I iterate through. In the end, I created a new hash named @character_info_push and iterated through my @symbols array. For each symbol within the array, the element in the @values array with the same index number would be assigned as the value and pushed into the @character_info_push array.
+	
+    def create_hash
+	    @character_info_push = Hash.new
+	    @symbols.each do |symbol|
+	      @character_info_push[symbol] = @values[@symbols.index(symbol)]
+	    end
+    end
+	
+I wrapped all 3 of my methods, #SCRAPE_SITE, @CREATE_KEYS, and @CREATE_HASH in a new method named #CREATE_HERO_HASH. At the end of the method, the @character_info_push array would be used as an argument for Hero.new.
+	
+    def create_hero_hash
+	    scrape_site
+	    create_keys
+	    create_hash
+	    Hero.new(character_info_push)
+    end
+
+Now the data would be pulled off the site, create a hero and push the new hero into my CLI as an option on the menu. But I still wasn’t done.
+
+Error Branch:
+
+My program was good to go, I just needed to deal with the ‘what if’s. 
+1. What if the incorrect password is entered?
+- I created a PasswordError inherited from the StandardError class in my lib/oracle/cli.rb file. This would raise an error message stating the incorrect password was entered. I raised and rescued the error by calling my #PASSWORD method asking for the password again.
+2. What if the user input an integer not available on the list of options?
+- I created a SelectionError inherited from the StandardError class in my lib/oracle/cli.rb file. This would raise an error advising the user to enter a valid selection. I added an IF statement to my case statement of my #SELECT_OPTION method. If the integer selected is not between the range of 1 and the count of the Hero.all array, the SelectionError would raise and be rescued by asking for a selection again. 
+
+Finishing Touches:
+
+For my finishing touched, I went through my code to make sure I was not forgetting anything. I tested my program over and over going through different routes to find any error message I could. Once this was complete, I came up with the idea of giving the user ability to enter another hero into the program and list the details of the added character. At first, I wanted Oracle to have this power, then I decided it would be more fun for the user to use this function. I added a new condition to my case statement for the input of ‘add’. From here the user would be asked for the input of the end of the URL. Scraper.new(@url_ending).create_hero_hash is then called and set off the chain reaction of adding the requested user to the list of options presented to the user via the CLI.
+
+What if the user entered a URL that was already in the program? Would it list twice? What if the user entered an empty string? Would this epty hero be added to the list of options? Unfortunately both scenarios came true, duplicates and empty heroes were appearing. In order to avoid this, I created an @@all array within my ScrapperClass. Everytime the ScrapperClass was ran, the @url_ending would be pushed into the @@all array. In my case statement within the #SELECT_OPTION of my CLIClass received an IF statement for my ‘add’ condition. If an empty string or a url ending that was already entered into the @@all array of the ScraperClass, the new character would not be requested. My SelectionError would be raised and rescued, the list of options would be presented and the user would be asked for their input again. 
+
+Finally, all done. Oracle was ready for the world.
+

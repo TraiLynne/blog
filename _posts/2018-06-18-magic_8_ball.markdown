@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Magic 8 Ball"
+subtitle: "Sample Project"
+date:   2018-06-18 20:50:44 -0500
+category: project
+---
+
+Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!
+
+![Project ScreenShot]({{ "../img/magic8ball-screenshot.JPG" | absolute_url }})
+
+# Languages: 
+
+- HTML
+- CSS
+- JavaScript/jQuery
+
+# Pseudocode
+
+	OBJECT magic8Ball
+		PROPERTY List of Answers
+		FUNCTION Ask A Question
+			INPUT question
+			OBJECT magic 8-ball shakes
+			SELECT answer randomly from list of answers
+			OUTPUT choosen answer
+		END FUNCTION
+
+# Explained:
+Think of it like this, an object is a noun, a property is an adjective, and a function is a verb. An object is like a person, place, thing, or in this case a Magic 8 Ball. Each object can have multiple properties but the Magic 8 Ball only needs one thing, a list of answers.
+
+The action that needs to be taken is asking a question. When you cut out all the extra, it comes down to just a few basic steps:
+1. Ask a question - usually a yes or no question about the future
+2. Shake the Ball 
+3. An answer is selected at random
+4. The answer is displayed - Usually very ominous and may not even apply to the question
+
+There you have it, the Magic 8 Ball of the ... well now. I'm sure the future holds a lot more surprises for this timeless classic 
+			
+Check it out using the links below:
+- <a href="https://codepen.io/TraiLynne/pen/LrejrE/" target='_blank'>CodePen</a>
+- <a href="https://github.com/TraiLynne/magic-8-ball" target='_blank'>GitHub</a>
+
+
+

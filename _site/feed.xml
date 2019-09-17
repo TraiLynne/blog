@@ -1,1 +1,721 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-17T16:18:26-04:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Trai Lynne</title><subtitle>Web Developer</subtitle><author><name>Trai Lynne Compton</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-17T17:15:20-04:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Trai Lynne</title><subtitle>Web Developer</subtitle><author><name>Trai Lynne Compton</name></author><entry><title type="html">Sock Merchant Challenge</title><link href="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html" rel="alternate" type="text/html" title="Sock Merchant Challenge" /><published>2019-08-10T11:16:44-04:00</published><updated>2019-08-10T11:16:44-04:00</updated><id>http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html">&lt;h2 id=&quot;language-javascript&quot;&gt;Language: JavaScript&lt;/h2&gt;
+
+&lt;h1 id=&quot;the-problem&quot;&gt;The Problem&lt;/h1&gt;
+
+&lt;p&gt;Let’s say we work at a clothing store and just received a truckload of different color socks. There may be matching socks in the batch, but none of them have been paired up. We have been asked to determine how many pairs of socks can be made to sell.&lt;/p&gt;
+
+&lt;p&gt;We can always go through the tedious task of sorting through the socks and figuring out how many pairs there are by hand, but we are programmers. Let’s try this with code.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, the delivery company was kind enough to hand us some valuable information that details how many socks come in the bundle and what the color of each sock is in an unsorted list. We want to create an algorithm that takes in this information and returns the number of matching pairs.&lt;/p&gt;
+
+&lt;h1 id=&quot;my-approach&quot;&gt;My Approach&lt;/h1&gt;
+
+&lt;p&gt;To accomplish this, let’s approach this at a human level first. How would we go about solving this problem without code?&lt;/p&gt;
+
+&lt;p&gt;I would start by sorting all the socks by color. Group by group, I would create all the matching pairs possible and add the amount to my total number of pairs.&lt;/p&gt;
+
+&lt;p&gt;I wear mismatched socks so any socks that don’t match up still make a pair. However, for the sock-matchers out there, we will not count mismatched pairs in our total. &lt;/p&gt;
+
+&lt;p&gt;Another option would be to count the number of socks in each group, divide that number by 2 and round it down to a whole number if necessary.&lt;/p&gt;
+
+&lt;h2 id=&quot;break-this-down-into-steps&quot;&gt;Break this down into steps&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Sort the Socks by color&lt;/li&gt;
+  &lt;li&gt;Count the number of socks in a group&lt;/li&gt;
+  &lt;li&gt;Divide that number by 2 (and round it down to a whole number if necessary)&lt;/li&gt;
+  &lt;li&gt;Add this number to the total number of pairs&lt;/li&gt;
+  &lt;li&gt;Move on to the next group of socks and repeat steps 2 - 4 until all groups have been counted&lt;/li&gt;
+  &lt;li&gt;Return the total number of pairs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So this makes sense at a human level, how can we convey these same instructions to a computer? Well, one great thing about the information we are given is the list of colors is given in an array.&lt;/p&gt;
+
+&lt;p&gt;Arrays are special variables that can hold more than one piece of information at a time. Arrays have exceptional talents if we call on their built-in methods. A method is like a verb, an action that an array can carry out. A very useful method we can use in this instance is the .sort() method. We can also iterate through an array element by element and perform actions on each item using a loop.&lt;/p&gt;
+
+&lt;p&gt;My original Pseudocode for the problem is as follows:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;START FUNC Sock_Merchant
+    SORT array
+    
+    WHILE array length &amp;gt; 0:
+        Compare first 2 values:
+            IF values match:
+                add 1 to total pairs
+            DROP first 2 elements
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Aforementioned made perfect sense in my mind. First, we sort the array. Then, we compare the first two values. If the values match, we add 1 to our total number of pairs. Lastly, we drop the items. We repeat these steps until the entire array is empty. It is time to code.&lt;/p&gt;
+
+&lt;h1 id=&quot;my-solution&quot;&gt;My Solution&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sockMerchant(n, ar) {
+    let sorted = ar.sort((a, b)=&amp;gt; a - b);
+    let pairs = 0;
+
+    while (ar.length &amp;gt; 0) {
+        sorted[0] === sorted[1] ? pairs++ : pairs;
+
+        sorted.splice(0,2)  
+    }
+    return pairs;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;My original solution did just what I intended for it to do. When I tested my code against the sample tests, everything passed. I submitted my code. Three tests failed. Now, how did that happen?&lt;/p&gt;
+
+&lt;h2 id=&quot;debugging&quot;&gt;Debugging&lt;/h2&gt;
+
+&lt;p&gt;Well,  I experimented on the solution with manual input. I even did the work with pencil and paper to try to figure this out. What was going on? I did some snooping on the hidden tests by using my experience points to unlock the code. Line by line, I went through my solution. Sorting worked fine, comparing worked fine, then the answer jumped out to me. When I was comparing elements, I would drop them both. I found my bug. Let’s break this down a little further.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sockMerchant(n, ar) {
+    ar.sort((a, b) =&amp;gt; a - b);
+    let pairs = 0;
+
+    while (ar.length &amp;gt; 0) {
+        if (ar[0] !== ar[1]) {
+            ar.shift()
+        } else {
+            pairs++;
+            ar.splice(0,2)
+        }
+    }
+    return pairs;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;My refactored solution still take the first two items and compare them.   If the first item does not match the second item, we only drop the first item. If they match, we release both and add one to our total pairs. Picture holding a sock in each hand. You visually compare the two. If they match, you pair them up. If not, you let go of one and pick up the next.&lt;/p&gt;
+
+&lt;p&gt;Fingers crossed, let’s submit.
+All the tests pass with flying colors!&lt;/p&gt;
+
+&lt;h2 id=&quot;another-approach&quot;&gt;Another Approach&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function sockMerchant(n, ar) {
+    const colors = {};
+    let pairs = 0;
+
+    for(var i = 0; i &amp;lt; n; i++){
+        if (colors[ar[i]] === undefined) {
+            colors[ar[i]] = 0
+        }
+
+        colors[ar[i]] += 1
+    }
+
+    for(var c in colors) {
+        pairs += Math.floor(colors[c] / 2);
+    }
+
+    return pairs;
+
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can utilize an object to perform the task as well. Similar to the human-level approach we discussed earlier. In this approach, we can create an object to hold different colors as keys. The value of each key is the number of socks matching the color. We go through each element on the array and determine if there is a key that matches the color. If there is not a key, a key is created and set to a value of 0. We increase the value by one. We iterate through the array until we evaluate all the elements. After this, we go through each key in our Colors object and operate on its value. The value is divided by two and rounded down to a whole number then added to the total number of pairs. Once all the calculating is complete, we return the total number of pairs.&lt;/p&gt;
+
+&lt;h1 id=&quot;wrap-up&quot;&gt;Wrap Up&lt;/h1&gt;
+
+&lt;p&gt;Tasks we complete daily without a second thought are algorithms. Any time we follow a set of instructions, we are performing an algorithm. Approaching a problem from a human standpoint first is the easiest way for me to translate them to a computer.&lt;/p&gt;
+
+&lt;p&gt;Although code may look amazing and pass a few tests, it may not get the whole job done. Intricate testing can show any bugs and edge cases that may occur. Debugging and testing are essential skills needed to ensure we write the best possible algorithm.&lt;/p&gt;
+
+&lt;p&gt;Never forget, there is more than one approach to solving a problem. Keeping your mind open to different ways to solve a problem is key to programming. Never feel you are backed into a corner to solve a problem. If you can think it, you can program it.&lt;/p&gt;
+
+&lt;p&gt;My journey is far from over. There is so much more to come. I’m excited to continue and will use my blog to keep me accountable.&lt;/p&gt;
+
+&lt;p&gt;Want to strengthen your skills as well? Check out &lt;a href=&quot;https://www.hackerrank.com&quot; target=&quot;_blank&quot;&gt;HackerRank&lt;/a&gt; to get in your practice. I am currently completing the Interview Preparation Kit.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">Language: JavaScript</summary></entry><entry><title type="html">S&amp;amp;J Architects</title><link href="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html" rel="alternate" type="text/html" title="S&amp;J Architects" /><published>2019-02-06T17:53:44-05:00</published><updated>2019-02-06T17:53:44-05:00</updated><id>http://localhost:4000/blog/project/2019/02/06/user_interface_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html">&lt;p&gt;I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills.&lt;/p&gt;
+
+&lt;p&gt;The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.&lt;/p&gt;
+
+&lt;h3 id=&quot;this-project-highlights-mastery-in&quot;&gt;This project highlights mastery in:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;User Interface&lt;/li&gt;
+  &lt;li&gt;Responsive Design&lt;/li&gt;
+  &lt;li&gt;using Web Tools and Frameworks&lt;/li&gt;
+  &lt;li&gt;Applied JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/User-Interface-Project&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://trailynne.org/User-Interface-Project/&quot; target=&quot;_blank&quot;&gt;Live Demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0047.JPG&quot; alt=&quot;Web Pages&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;With any type of marketing page, you want the user to be able to view the page on any platform from desktop to a mobile phone. With this in mind, the S&amp;amp;J Architects was designed to be responsive from the very beginning. The project scales based on the size of the screen of the device. With the use of media queries, I was able to get the layout of the page to be pixel-perfect.&lt;/p&gt;
+
+&lt;p&gt;The design of the project takes the user experience into account. Since there is a lot of information provided about the company, displaying it all at once would require A LOT of scrolling. Nobody wants to be overloaded. The services page came predesigned with the tabs &amp;amp; cards. Targeting specific topics and seeing the details right below will focus the user’s attention. I think the carousel is a nice touch for the properties that appear on the landing page.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-journey&quot;&gt;The Journey&lt;/h1&gt;
+&lt;h3 id=&quot;preparation&quot;&gt;Preparation&lt;/h3&gt;
+
+&lt;p&gt;The first step I take in any major project is to set up my Trello board in order to organize my thoughts and tasks. I used the standard lists: To Do, In Progress, Done, and Backlog.&lt;/p&gt;
+
+&lt;p&gt;In order to prepare for the task, I broke down the design files that were provided. I deduced similar aspects such as the layout of the pages, the header, the footer, etc. I knew I wanted to group these similar pieces in my code in order to keep it DRY.&lt;/p&gt;
+
+&lt;p&gt;From here I set up my file structure in order to start coding. Within the root directory, there are a few sub-directories with the names &lt;code class=&quot;highlighter-rouge&quot;&gt;components&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;css&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;less&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;img&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;js&lt;/code&gt; that hold their corresponding files.&lt;/p&gt;
+&lt;h3 id=&quot;basic-html--structure&quot;&gt;Basic HTML &amp;amp; Structure&lt;/h3&gt;
+
+&lt;p&gt;While writing HTML and setting up the structure of a page, I attempt to make code that is reusable as possible.&lt;/p&gt;
+
+&lt;p&gt;After inspecting the design files provided, I noticed the similarities for each page layout.  The header and footers are all the same as well as the main structure of each page. Each page has a hero area and an area for the main content.&lt;/p&gt;
+
+&lt;h3 id=&quot;static-css-using-less&quot;&gt;Static CSS using LESS&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0043.JPG&quot; alt=&quot;Responsive Design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For this project, I took advantage of the LESS preprocessor. In the past, I had globally installed LESS as well as the &lt;code class=&quot;highlighter-rouge&quot;&gt;less-watch-compiler&lt;/code&gt; globally to my system.&lt;/p&gt;
+
+&lt;p&gt;In order to get the LESS preprocessor up and running, I &lt;code class=&quot;highlighter-rouge&quot;&gt;cd&lt;/code&gt; into my projects root directory. Within the root directory, I ran the command &lt;code class=&quot;highlighter-rouge&quot;&gt;less-watch-compiler less css index.less&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;first thing I added to the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.less&lt;/code&gt; file would be the CSS reset. I wanted to use a blank slate to get the proper end result.&lt;/p&gt;
+
+&lt;p&gt;The general styles of the page were completed within the main &lt;code class=&quot;highlighter-rouge&quot;&gt;index.less&lt;/code&gt; file. Things like background color or the overall font family. From here, each component received it’s own LESS file housed within its subfolder.  These files were then imported into the main LESS file. I decided to organize the code like this so I could use those component files in future projects where I may need a carousel or tabbed card system.&lt;/p&gt;
+
+&lt;h3 id=&quot;javascript&quot;&gt;JavaScript&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0048.JPG&quot; alt=&quot;Image Carousel&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I was inflexible about having an infinite loop for the carousel. A &lt;code class=&quot;highlighter-rouge&quot;&gt;Carousel&lt;/code&gt; class and a &lt;code class=&quot;highlighter-rouge&quot;&gt;CarouselCard&lt;/code&gt; class were created to complete the task. The Carousel itself handles the heavy-lifting. It handles the order of the cards and the click handling. The &lt;code class=&quot;highlighter-rouge&quot;&gt;CarouselCard&lt;/code&gt;s are really just for presentational purposes.&lt;/p&gt;
+
+&lt;p&gt;The Header and Navigation system are still being improved. I admit I am not a master of GreenSock, but I love how smooth and clean the transitions are for the platform. The navigation successfully opens and closes like a drawer. The only thing I want to change is how the navigation items appear. I’d like it better if the drawer transitioned as a whole. Currently, the menu items to shift around on each transition.&lt;/p&gt;
+
+&lt;p&gt;The Hero area is my favorite area on each page. Most likely because it took the most time in the CSS stage. Or it could be the professional tone that it sets off. It’s such a simple, subtle animation over a picture that sets off a professional tone for the page. I used GreenSock to get this animation up and running.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0050.JPG&quot; alt=&quot;Tabbed Cards&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The tabbed card logic was split by Link and Card. Every &lt;code class=&quot;highlighter-rouge&quot;&gt;TabLink&lt;/code&gt; is attached to a corresponding &lt;code class=&quot;highlighter-rouge&quot;&gt;TabCard&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;TabLink&lt;/code&gt; handles the click handling.  When a tab is clicked, all the cards are checked for the &lt;code class=&quot;highlighter-rouge&quot;&gt;.active-tab&lt;/code&gt; CSS class. Once there are no cards shown, the tab’s card is then given the &lt;code class=&quot;highlighter-rouge&quot;&gt;.active-tab&lt;/code&gt; class and displayed on the screen.&lt;/p&gt;
+
+&lt;h3 id=&quot;looking-ahead-&quot;&gt;Looking Ahead …&lt;/h3&gt;
+
+&lt;p&gt;I am proud of this project! My web development skills were pushed to the next level. However, I see a few tweaks for the near future. The assignment has a few stretch goals I want to complete. These changes extend the website with a couple pages for ‘About Us’ and ‘Projects’. Most of the updates I have are centered around transitions. I want to clean up the navigation drawer as I mentioned above. My goal is to have the drawer items to transition without the extra shifting. I also want to smoother transitions on the carousel and tabbed cards. The current version is bland.&lt;/p&gt;
+
+&lt;p&gt;Thank you so much for checking out this project. There are many more surprises and projects on the horizon. Stay tuned.&lt;/p&gt;
+
+&lt;p&gt;~Trai Lynne;&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://lesscss.org/&quot; taget=&quot;_blank&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.javascript.com/&quot; target=&quot;_blank&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://greensock.com/&quot; target=&quot;_blank&quot;&gt;GreenSock&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><category term="html" /><category term="css" /><category term="less" /><category term="javascript" /><summary type="html">I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills. The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.</summary></entry><entry><title type="html">Interactive Clock</title><link href="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html" rel="alternate" type="text/html" title="Interactive Clock" /><published>2018-07-11T18:53:44-04:00</published><updated>2018-07-11T18:53:44-04:00</updated><id>http://localhost:4000/blog/project/2018/07/11/interactive_clock_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html">&lt;p&gt;This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/interactive-clock.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;languages&quot;&gt;Language(s)&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/clock-project&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codepen.io/TraiLynne/full/PBwgym/&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Visually, this looks like a fairly simple project right? Wrong! Under the hood, there is a lot is going on.&lt;/p&gt;
+
+&lt;h1 id=&quot;htmlcss&quot;&gt;HTML/CSS&lt;/h1&gt;
+
+&lt;p&gt;The visual aspects of the page were pretty easy to handle. Basic HTML elements were used for the most part such as a header, image, and a few paragraph tags.&lt;/p&gt;
+
+&lt;p&gt;In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked.  The times are split into hour intervals.&lt;/p&gt;
+
+&lt;p&gt;A ‘button’ element is used to create the “Party Time” option. This button is used to toggle an override of the picture and message shown when it’s time to have fun.&lt;/p&gt;
+
+&lt;p&gt;Initially, placeholders are used for the time, image and message that is displayed. JavaScript is used to customize the placeholders.&lt;/p&gt;
+
+&lt;h1 id=&quot;javascript&quot;&gt;JavaScript&lt;/h1&gt;
+&lt;p&gt;JavaScript is where the interactivity occurs. There’s a lot going on but I will keep the focus on the major jobs that JavaScript is accomplishing in this project.&lt;/p&gt;
+
+&lt;p&gt;First off, we have the updateClock function that is used for the real fun. It is a huge sentence basically telling my program if this happens, then do that or else if something else happens, do something else. It is an easy way to tell the clock what message and image to display based on the hour of the day.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var updateClock = function() {
+    // IF/ELSE statement controls photo and message displayed
+    if (time == partyTime) {
+        messageText = &quot;Let's Get this Party Started!&quot;;
+        imageSource = &quot;...&quot;;
+    } else if (time == napTime) {
+        messageText = &quot;Let's get some sleep&quot;;
+        imageSource = &quot;...&quot;;
+     } else if (time == lunchTime) {
+         messageText = &quot;It's Lunch Time!!&quot;;
+         imageSource = &quot;....&quot;;
+    } else if (time == wakeupTime) {
+        messageText = &quot;Wake up and make it happen.&quot;;
+        imageSource = &quot;...&quot;;
+    } else if (time &amp;lt; noon) {
+        messageText = &quot;Good Morning!&quot;;
+        imageSource = &quot;...&quot;;
+    } else if (time &amp;gt; evening) {
+        messageText = &quot;Good Evening!&quot;;
+        imageSource = &quot;...&quot;;
+    } else {
+        messageText = &quot;Good Day!&quot;;
+        imageSource = &quot;...&quot;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, I wanted the time of day to be displayed in real time in normal language. When displaying the time with JavaScript, it displays military language. Don’t get me wrong, I actually use military time a lot, but not everyone has it memorized or likes to do the math. Instead, i used JavaScript to do the math for me. I also used the setInterval function to update the clock every second. It keeps the user from having to press refresh repeatedly.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var showCurrentTime = function() {
+    // display the string on the webpage
+    var clock = document.getElementById(&quot;clock&quot;);
+    var currentTime = new Date();
+    
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var meridian = &quot;AM&quot;;
+    
+    // Set hours
+    if (hours &amp;gt;= noon) {
+      meridian = &quot;PM&quot;;
+    }
+    
+    if (hours &amp;gt; noon) {
+        hours = hours - 12;
+    }
+    
+    // Set Minutes
+    if (minutes &amp;lt; 10) {
+        minutes = &quot;0&quot; + minutes;
+    }
+    
+    // Set Seconds
+    if (seconds &amp;lt; 10) {
+        seconds = &quot;0&quot; + seconds;
+    }
+    
+    // put together the string that displays the time
+    var clockTime = hours + &quot;:&quot; + minutes + &quot;:&quot; + seconds + &quot; &quot; + meridian + &quot;!&quot;;
+    
+    clock.innerText = clockTime;
+};
+
+setInterval(updateClock, oneSecond);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, is the Party Time Button. JavaScript is used to change multiple elements on the page when the Party TIme button is pressed. Some things you notice that change are the picture and message displayed as well as the button itself. Did you notice that it switches between “Party Time” and “Party Over”?&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//- Changes Button upon Pressing
+var partyEvent = function() {
+    if (isPartyTime === false) {
+        isPartyTime = true;
+        time = partyTime;
+        partyTimeButton.innerText = &quot;Party Over&quot;;
+        partyTimeButton.style.backgroundColor = &quot;#0A8DAB&quot;;
+    } else {
+        isPartyTime = false;
+        time = new Date().getHours();
+        partyTimeButton.innerText = &quot;PARTY TIME!&quot;;
+        partyTimeButton.style.backgroundColor = &quot;#222&quot;;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;From there, it’s all about having JavaScript listen for the right event so the page can be updated correctly. A few even listeners added were any changes made to the time selectors for waking up, lunch, and nap time. We also needed it to watch out for that Party Time button to be clicked.&lt;/p&gt;
+
+&lt;p&gt;Ta-Da !! The interactive clock is ready for action.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><category term="javascript" /><category term="ruby" /><summary type="html">This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.</summary></entry><entry><title type="html">Find the Middle Element</title><link href="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html" rel="alternate" type="text/html" title="Find the Middle Element" /><published>2018-07-11T14:45:44-04:00</published><updated>2018-07-11T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html">&lt;p&gt;As a codewars beta member I just completed training on the “Find the middle element” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!
+ If you are a member already &lt;a href=&quot;http://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript&quot;&gt;click here&lt;/a&gt; to train on “Find the middle element”.&lt;/p&gt;
+
+&lt;h1 id=&quot;training-language&quot;&gt;Training Language&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+  &lt;li&gt;Ruby&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;description&quot;&gt;Description:&lt;/h1&gt;
+&lt;p&gt;A function that accepts an input of a triplet of integers and returns the index of the elements whose value falls in the middle. The input to the function will be an array of three ( 3 ) distinct numbers.&lt;/p&gt;
+
+&lt;h1 id=&quot;decomposition&quot;&gt;Decomposition:&lt;/h1&gt;
+&lt;p&gt;Break the problem down into manageable steps. Smaller problems are easier to solve than one huge one. Once each small step is solved, before you know it, the big one is too.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Determine which of the three ( 3 ) elements in the given array falls in the middle based on the value&lt;/li&gt;
+  &lt;li&gt;Determine the index of the middle value in relation to the original array&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;abstraction&quot;&gt;Abstraction:&lt;/h1&gt;
+&lt;p&gt;Determine what is absolutely necessary to solve the problem. Cut the clutter. Clean, elegant code is the goal.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;An input of an array with three ( 3 ) distinct numbers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pattern-recognition&quot;&gt;Pattern recognition:&lt;/h1&gt;
+&lt;p&gt;Is there any step that is being repeated? These usually lead to great functions or loops. Developers love DRY code. DRY meaning Don’t Repeat Yourself. So the DRYer the code, the better.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;N/A&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pseudocode&quot;&gt;Pseudocode&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FUNCTION gimme
+	INPUT triplet array
+	SORT triplet array  AS sorted array
+	SET middle AS sorted array INDEX 1
+	RETURN INDEX OF triplet array with the same value of middle
+END FUNCTION
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;final-code&quot;&gt;Final Code&lt;/h1&gt;
+&lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var gimme = function (inputArray) {
+  		function sortedCopy(array) { 
+			return array.concat().sort(function(a, b){ return a - b });
+  		}  
+    var sortedArray = sortedCopy(inputArray);
+    return inputArray.indexOf(sortedArray[1]);
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def gimme(input_array)
+ 		 input_array.index(input_array.sort[1])
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;what-did-i-learn&quot;&gt;What did I learn?&lt;/h1&gt;
+
+&lt;h2 id=&quot;javascript-1&quot;&gt;JavaScript:&lt;/h2&gt;
+
+&lt;p&gt;Originally, I wanted to use the simple .sort function, however, there are two ( 2 ) major problems that I would need to iron out.&lt;/p&gt;
+
+&lt;p&gt;First, the .sort method works way better with letters than numbers. When wanting to sort words, it’s as simple as ABC for JavaScript. When it comes to numbers, the values are sorted in the same way - in a sense. Let’s say we gave JavaScript the integers 25, 5, 123 and 112. They will be sorted as they would appear in the encyclopedia instead of on the number line. Weird to try to describe out loud so here: your brain would normally say the sorted version is 5, 25, 112, 123 right? Well, JavaScript says 112, 123, 25, 5. Why? Well because the 1s come before the 2 and 5. Get it?&lt;/p&gt;
+
+&lt;p&gt;Ok, moving on. My 2nd problem is I would literally lose the original array. When .sort is called on an array, it reconstructs the original array instead of making a copy and just giving me a new one. My output would always be the index of 1 and I do not want that.&lt;/p&gt;
+
+&lt;p&gt;In order to get past these hiccups, I created my own sort function.  Within my function, I create a copy of the original array that I can alter to my liking using the .concat function. It usually is used to join 2 arrays and output a new array of what is combined. I just added my one array and got my copy. I then used the good ol’ .sort function with a little tweak so it can work better with numbers. I did not come up with this tweak on my own, it is a well-known fix to the sort function for sorting numbers.&lt;/p&gt;
+
+&lt;p&gt;I realize that I could have made this function with just one line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inputArray.indexOf(inputArray.concat().sort(function(a, b) { return a - b })[1])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I decided I like my version better. If this were a bigger program,  sortedCopy could be called multiple times without having to write it out many times. Because it creates a function that can be called multiple times in the future if needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby-1&quot;&gt;Ruby&lt;/h2&gt;
+
+&lt;p&gt;With Ruby, the .sort function outputs a new array without adjusting the original array. I simply sorted the array and located the index of the element within the original array that holds the same value as the middle element of the sorted array.&lt;/p&gt;
+
+&lt;p&gt;Since I did not have to create a new function or any special tricks, I created one clean line that gets straight to the output.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">As a codewars beta member I just completed training on the “Find the middle element” kata. Take the initiation to join me and start training too! If you are a member already click here to train on “Find the middle element”.</summary></entry><entry><title type="html">Sum of Positive</title><link href="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html" rel="alternate" type="text/html" title="Sum of Positive" /><published>2018-07-05T14:45:44-04:00</published><updated>2018-07-05T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html">&lt;p&gt;As a CodeWars beta member, I just completed training on the “Sum of positive” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!&lt;/p&gt;
+
+&lt;p&gt;If you are a member already &lt;a href=&quot;http://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript&quot;&gt;click here&lt;/a&gt; to train on “Sum of positive”.&lt;/p&gt;
+
+&lt;h1 id=&quot;training-language&quot;&gt;Training Language&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;description&quot;&gt;Description&lt;/h1&gt;
+
+&lt;p&gt;An array of numbers is passed into a function. The return is the sum of all of the positive numbers. If there is nothing to add, the default sum is set to zero ( 0 ). 
+Example [1, -4, 7, 12] =&amp;gt; 1 + 7 + 12 = 20&lt;/p&gt;
+
+&lt;h1 id=&quot;decomposition&quot;&gt;Decomposition:&lt;/h1&gt;
+
+&lt;p&gt;Break the problem down into small, manageable steps. Why? Because a few smaller problems are easier to solve than one huge one. Once each small step is taken care of, before you know it, the big task is complete.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set the initial value of the sum to zero (0).&lt;/li&gt;
+  &lt;li&gt;Collect the first element in the array
+    &lt;ul&gt;
+      &lt;li&gt;if the value is greater than 0
+        &lt;ul&gt;
+          &lt;li&gt;add the value to the sum&lt;/li&gt;
+          &lt;li&gt;move on to the next element&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;if the value is less than 0
+        &lt;ul&gt;
+          &lt;li&gt;move on to the next element&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Repeat step 2 until all elements have been evaluated&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;abstraction&quot;&gt;Abstraction:&lt;/h1&gt;
+
+&lt;p&gt;Cut the clutter. Determine what is absolutely necessary to solve the problem.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input of numbers&lt;/li&gt;
+  &lt;li&gt;Output of sum&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pattern-recognition&quot;&gt;Pattern recognition:&lt;/h1&gt;
+
+&lt;p&gt;Developers love DRY code. DRY meaning Don’t Repeat Yourself. Is there any step that is being repeated? These usually lead to great functions or loops.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Determine if a value is positive or negative&lt;/li&gt;
+  &lt;li&gt;Add positive integers to the sum&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pseudocode&quot;&gt;Pseudocode&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;SET  VARIABLE sum TO default 0   
+LOOP input array 
+  IF array element IS &amp;gt; 0 
+    ADD array element value TO sum value 
+END LOOP 
+RETURN sum value 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;my-final-solution&quot;&gt;My Final Solution&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function positiveSum(arr) {
+  for(var i = 0 , sum = 0 ; i &amp;lt; arr.length ; i++){
+    if( arr[i] &amp;gt; 0 ){
+      sum = sum + arr[i]
+    }
+  }    
+  return sum;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ALL TESTS PASSED! YAY!&lt;/p&gt;
+
+&lt;h1 id=&quot;what-did-i-learn&quot;&gt;What did I learn?&lt;/h1&gt;
+
+&lt;p&gt;So, whenever I complete a challenge, I look through others’ solutions for anything I can improve upon. This time around, I learned there are 2 functions that complete the job, JavaScript filter() &amp;amp; reduce() functions. My solution could be completely rewritten WITHOUT a loop. I admit, I like the refactored version better, although both are great and get the job done.&lt;/p&gt;
+
+&lt;h2 id=&quot;refactored-solution&quot;&gt;Refactored Solution&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function positiveSum (arr) {
+  return arr.filter(x =&amp;gt; x &amp;gt; 0).reduce((a, b) =&amp;gt; a + b, 0);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;filter&quot;&gt;filter()&lt;/h3&gt;
+
+&lt;p&gt;JavaScript filter() returns an array containing all the array elements that pass a test given as a function. Some important things to note about filter():&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;it will not execute on an empty array&lt;/li&gt;
+  &lt;li&gt;it does not change the original array.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So this step is where all the negative integers are removed and an array of only positive integers (if any) is returned.&lt;/p&gt;
+
+&lt;p&gt;For more information on JavaScript filter() function, check it out &lt;a href=&quot;https://www.w3schools.com/jsref/jsref_filter.asp&quot;&gt;here&lt;/a&gt; on W3 Schools.&lt;/p&gt;
+
+&lt;h3 id=&quot;reduce&quot;&gt;reduce()&lt;/h3&gt;
+&lt;p&gt;JavaScripts reduce() function reduces an array to one value. It goes through each element of the attached array from left to right an executes the provided function on each. It returns an accumulator which is just fancy for a result or total. An important thing to note about reduce():&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;it does not execute on an empty array.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is where the positive elements in the array returned by the filter() function are added together.&lt;/p&gt;
+
+&lt;p&gt;For more information on JavaScript reduce() function, check it out &lt;a href=&quot;https://www.w3schools.com/jsref/jsref_reduce.asp&quot;&gt;here&lt;/a&gt; on W3 Schools.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">As a CodeWars beta member, I just completed training on the “Sum of positive” kata. Take the initiation to join me and start training too!</summary></entry><entry><title type="html">Jubilee Austen</title><link href="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html" rel="alternate" type="text/html" title="Jubilee Austen" /><published>2018-06-27T17:30:44-04:00</published><updated>2018-06-27T17:30:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/27/jubilee_austen</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html">&lt;p&gt;A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/full-screen.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;languages&quot;&gt;Languages:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codepen.io/TraiLynne/full/mKGdBr/&quot; target=&quot;_blank&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/jubilee-austen&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A portfolio is a key component to displaying your skills and landing clients. No matter your field of work, this portfolio has everything to fit your needs. It’s simple, sleek, and straight to the point. It can be altered and customized to fit the needs of any individual.&lt;/p&gt;
+
+&lt;p&gt;This webpage was designed to be static, which simply means it will look the same regardless of looking at it on your phone, tablet, or computer. Some people prefer it that way. However, for those who like some change, this page can easily be converted into a Responsive site that adjusts based on the screen size it is viewed on.&lt;/p&gt;
+
+&lt;h1 id=&quot;get-their-attention&quot;&gt;Get Their Attention!&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/header.JPG&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The header displays an eye-catching tagline that is sure to capture the attention of the viewer as soon as the page loads.  Let your audience know right away why you are the one for the job.&lt;/p&gt;
+
+&lt;h1 id=&quot;let-them-know-who-you-are&quot;&gt;Let Them Know Who You Are!&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/about.JPG&quot; alt=&quot;About Section&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Relate to your public by providing a little information about yourself here. Let them know you are human. You can highlight your background, your likes or dislikes, your journey in your career field. This can be literally anything you want to say, the sky is not even the limit.&lt;/p&gt;
+
+&lt;p&gt;Tip: Make sure to use the word choice that best relates to your target audience. Do you want it to be formal or informal? Are you talking to friends or targeting a big corporation? Word choice makes a world of difference.&lt;/p&gt;
+
+&lt;h1 id=&quot;show-off-your-skills&quot;&gt;Show Off Your Skills!&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/work.JPG&quot; alt=&quot;Work Section&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Think of this as a mix of your resume and your trophy shelf. This is the segment where you get to show off, brag a little! Show the world what you can do. This also gives your viewers a chance to see if your skills fit their needs.
+It can be a description of the skills you have, links to examples of your work, powerful praise from people you partnered with in the past, etc. Either way, be proud of your abilities and what you have accomplished. Display it for the world to see!&lt;/p&gt;
+
+&lt;h1 id=&quot;contact-information&quot;&gt;Contact Information&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/contact.JPG&quot; alt=&quot;Contact Section&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Providing multiple points of contact is key. Not everyone is a fan of talking on the phone, I know I’m not. There are also some people who only use their email address to store spam and coupons. By providing options, you’ll never miss an opportunity to connect with someone. Plus if you display your skills via social media, you give people a chance to follow you and keep up with your latest accomplishments.&lt;/p&gt;
+
+&lt;p&gt;Regardless of your expertise, a portfolio webpage will launch your career or business to new levels!&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.</summary></entry><entry><title type="html">Magic 8 Ball</title><link href="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html" rel="alternate" type="text/html" title="Magic 8 Ball" /><published>2018-06-18T21:50:44-04:00</published><updated>2018-06-18T21:50:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/18/magic_8_ball</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html">&lt;p&gt;Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/magic8ball-screenshot.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;languages&quot;&gt;Languages:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript/jQuery&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;pseudocode&quot;&gt;Pseudocode&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;OBJECT magic8Ball
+	PROPERTY List of Answers
+	FUNCTION Ask A Question
+		INPUT question
+		OBJECT magic 8-ball shakes
+		SELECT answer randomly from list of answers
+		OUTPUT choosen answer
+	END FUNCTION
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;explained&quot;&gt;Explained:&lt;/h1&gt;
+&lt;p&gt;Think of it like this, an object is a noun, a property is an adjective, and a function is a verb. An object is like a person, place, thing, or in this case a Magic 8 Ball. Each object can have multiple properties but the Magic 8 Ball only needs one thing, a list of answers.&lt;/p&gt;
+
+&lt;p&gt;The action that needs to be taken is asking a question. When you cut out all the extra, it comes down to just a few basic steps:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Ask a question - usually a yes or no question about the future&lt;/li&gt;
+  &lt;li&gt;Shake the Ball&lt;/li&gt;
+  &lt;li&gt;An answer is selected at random&lt;/li&gt;
+  &lt;li&gt;The answer is displayed - Usually very ominous and may not even apply to the question&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There you have it, the Magic 8 Ball of the … well now. I’m sure the future holds a lot more surprises for this timeless classic&lt;/p&gt;
+
+&lt;p&gt;Check it out using the links below:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://codepen.io/TraiLynne/pen/LrejrE/&quot; target=&quot;_blank&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/magic-8-ball&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!</summary></entry><entry><title type="html">The Wait is Over</title><link href="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html" rel="alternate" type="text/html" title="The Wait is Over" /><published>2018-06-16T16:46:44-04:00</published><updated>2018-06-16T16:46:44-04:00</updated><id>http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over</id><content type="html" xml:base="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html">&lt;p&gt;I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.&lt;/p&gt;
+
+&lt;p&gt;For starters, I decided to relaunch my portfolio website and I am extremely proud of the finished product. This needed to be done for a few reasons but mainly because I felt it did not properly reflect the progress I have made in my coding journey. I adored my old website but as soon as it launched I knew I could do better and I made it happen. I feel the current website is a proper representation of my skills.&lt;/p&gt;
+
+&lt;p&gt;I have decided to make a few commitments moving forward and writing them out helps me mentally commit. Plus it’s on the site so I have to do it.&lt;/p&gt;
+
+&lt;p&gt;Effective immediately, I will be:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Updating and improving previous projects (then moving on to additional personal projects, of course)&lt;/li&gt;
+  &lt;li&gt;Keep my skills strong by completing CodeWar (https://www.codewars.com/)  Katas&lt;/li&gt;
+  &lt;li&gt;Read more blogs, articles, and books&lt;/li&gt;
+  &lt;li&gt;Get serious about freelancing!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I will continuously update the site with the products of these actions, so be on the lookout for new content and features coming soon!&lt;/p&gt;
+
+&lt;p&gt;-Trai Lynne.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="personal" /><summary type="html">I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.</summary></entry><entry><title type="html">Rogue Pickings</title><link href="http://localhost:4000/blog/project/2017/10/26/rogue_pickings.html" rel="alternate" type="text/html" title="Rogue Pickings" /><published>2017-10-26T15:00:44-04:00</published><updated>2017-10-26T15:00:44-04:00</updated><id>http://localhost:4000/blog/project/2017/10/26/rogue_pickings</id><content type="html" xml:base="http://localhost:4000/blog/project/2017/10/26/rogue_pickings.html">&lt;p&gt;Rogue Pickings is a beautifully created static webpage with a layout and design that can be easily adjusted to fit the needs of any type of company.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/fullsite_zpsgjaguoiz.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Full photo fullsite_zpsgjaguoiz.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+&lt;p&gt;See the &lt;a href=&quot;https://github.com/TraiLynne/rogue_pickings&quot; target=&quot;_blank&quot;&gt;Rogue Pickings Repo&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;p&gt;See the Pen &lt;a href=&quot;https://codepen.io/TraiLYNNE/full/wPvjez&quot; target=&quot;_blank&quot;&gt;Rogue Pickings Pen&lt;/a&gt; on CodePen.&lt;/p&gt;
+
+&lt;h2 id=&quot;process&quot;&gt;Process&lt;/h2&gt;
+&lt;p&gt;For a simple static website, I follow a three step process – structure, content, and style. The structure and content steps are the easiest, yet most unattractive steps. For me, the style step is always the most fun.&lt;/p&gt;
+
+&lt;p&gt;To start the project, I was provided a PSD file for the site via &lt;a href=&quot;https://skillcrush.com/&quot; target=&quot;_blank&quot;&gt;Skillcrush&lt;/a&gt;. I also grab a copy of the &lt;a href=&quot;https://html5boilerplate.com/&quot; target=&quot;_blank&quot;&gt;HTML5 Boilerplate&lt;/a&gt; files and load them into my root directory. I use Git and GitHub throughout the entire process saving and committing my work at appropriate times.&lt;/p&gt;
+
+&lt;p&gt;Before adding any words, pictures, or other viewable content to my HTML file, I set up the structural tags. ‘Rogue Pickings’ is separated into three areas – Header, Main, and Footer. I further break down the structure as necessary based on the layout of the site. Once all the structural tags are in place, I begin adding in the content. For this project, the tags I use are paragraph tags, h1-h3 header tags, an image tag and a couple unordered lists. Lastly, I pull up the HTML file in Google Chrome to begin styling the site, refreshing the page throughout the process to make sure everything looks just right.&lt;/p&gt;
+
+&lt;p&gt;For this site, I set up my CSS file by listing out all the tags, classes, and IDs first - from the outside in and top to bottom - with each having its own curly brackets. This helped me to organize the CSS file based on sections. If any of the tags aren’t used, I simply erase the tag and curly braces from the file to avoid unnecessary clutter.&lt;/p&gt;
+
+&lt;h3 id=&quot;header-area&quot;&gt;Header Area&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/header_zpssztqozcm.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Header photo header_zpssztqozcm.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;structure--content&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
+&lt;p&gt;The header area contains two levels of nested div tags. The first level is part of the full-width class. The second level contains two  div tags of the half-width class. The first half of the header contains the logo “Rogue Pickings”. The second half contains the nav tag which holds a unordered list to display the navigation. Since this is a one-page site, the navigation does not contain actual links. (On the plus side, this allows me to build on to the site and add new pages in the future)&lt;/p&gt;
+
+&lt;h4 id=&quot;style&quot;&gt;Style&lt;/h4&gt;
+&lt;p&gt;Overall, any div tags with the class of full-width are a total of 1200px wide throughout the page. The divs with half-width are 600px wide. There are also third-width divs each 400px wide used later in the main area of the page. The half-width and third-width divs are floated to the left so the information is displayed neatly sitting side by side on the page.&lt;/p&gt;
+
+&lt;p&gt;In the header area, all the words are transformed into uppercase letters. There is also a border at the bottom of full-width div that is a light green color used as a type of highlight throughout the page.&lt;/p&gt;
+
+&lt;p&gt;The h1 tag for the logo has an inline tag called span. This allowed me to make ‘Rogue’ the same light green color used for the border and keep ‘Pickings’ the basic black color. I added padding to the top and bottom of the H1 tag to keep it from being directly on the edge of the page. In order to get the measurement for any padding used throughout the page, I used the ruler tool in Photoshop.&lt;/p&gt;
+
+&lt;p&gt;The navigation took some trial and error. In order to make the navigation options sit side-by-side, I had them float to the right of the page. The words are changed to light green. To keep the words from being right next to each other, I added a small amount of padding to the left of each word.&lt;/p&gt;
+
+&lt;p&gt;I did have a little hiccup while styling the header. Although I specified that the border was at the bottom of the header, it kept ending up at the top of the page. Since the half-width divs were floated to the left, they were actually removed from the flow of the page. Basically, the header area was now empty in a way. To alleviate this issue, I used the overflow property and set it to auto.&lt;/p&gt;
+
+&lt;h3 id=&quot;main-area&quot;&gt;Main Area&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/main_zps88sqgcdf.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Main photo main_zps88sqgcdf.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;structure--content-1&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
+&lt;p&gt;The main area is separated into two section tags with IDs that are easy to remember: top and bottom.&lt;/p&gt;
+
+&lt;p&gt;The top section has one nested div tag that is part of the full-width class. The div holds an image, a level two header, and a paragraph.&lt;/p&gt;
+
+&lt;p&gt;The bottom section also holds a full-width div which is then separated into three nested divs of the third-width class. Each of the three divs has a third level header tag. The first of the three divs has the ID ‘specials’ and a unordered list of the day’s specials. The second div with the id of ‘reviews’ has a paragraph tag to highlight one review. The last div has the ID ‘contact’. I used a paragraph tag to hold the address and contact number for the company. In order to get the contact information split into the lines I needed, I used break tags.&lt;/p&gt;
+
+&lt;h4 id=&quot;style-1&quot;&gt;Style&lt;/h4&gt;
+
+&lt;p&gt;The top section is pretty straightforward. I added a border to the bottom of the image using the same specifications as the border at the bottom of the header area. The h2 tag used for the headline is transformed into uppercase letters and changed to the light green color. I added a little bit of padding to the top of the headline in order to give the words some space from the bottom of the image. The paragraph includes an adjusted line height (the space between the top of one line to the top of the next line). I set the property a few pixels bigger than the font size in order to make the paragraph easier to read.&lt;/p&gt;
+
+&lt;p&gt;The bottom section required more time since each third required its own special attention to display correctly. The full-width div in the bottom section includes a thin light grey border.  All of the H3 tags were transformed into uppercase letters. A small amount of padding was added to the top of the headers in order to keep them from being too close to the border. The specials div contains a unordered list. Typically, a list automatically comes with bullet points or numbers. I changed the list-style and padding properties off to remove the bullet points. Each list item is the signature light green color. I also added the same thin grey border to the left of the ‘specials’ and ‘reviews div to easily see the different areas. The reviews and contact divs adds padding around header and paragraph tags to keep the words near the center of the div. The line height of the paragraph is also increased to improve readability.&lt;/p&gt;
+
+&lt;h3 id=&quot;footer-area&quot;&gt;Footer Area&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/footer_zpsc1cre5gg.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Footer photo footer_zpsc1cre5gg.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;structure--content-2&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
+&lt;p&gt;The footer area is nested with one full-width class div. Within the div is a level two header tag. The word ‘fresh’ is surrounded by an inline span tag in order for the word to be styled differently than the rest of the sentence.&lt;/p&gt;
+
+&lt;h4 id=&quot;style-2&quot;&gt;Style&lt;/h4&gt;
+&lt;p&gt;The top of the footer area is bordered by the same thin grey line used for the bottom section of the main area. The H2 tag is aligned to the center with padding added to both the top and bottom of the sentence. All the words are transformed to uppercase. Once I focused in on the word ‘fresh’ held between the span tags, I transform the text to lower case and change the color from black to light green. The font defaults to Wisdom Script which is a downloaded OpenType Font (.otf) file held in the fonts folder of the root directory. Since not all computers are able to read the font file (including mine) I found a backup Google Font named Dancing Script which I linked to the HTML file. If all else fails, the cursive font is the last line of defense.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">Rogue Pickings is a beautifully created static webpage with a layout and design that can be easily adjusted to fit the needs of any type of company.</summary></entry><entry><title type="html">Personal Website Makeover</title><link href="http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover.html" rel="alternate" type="text/html" title="Personal Website Makeover" /><published>2017-10-21T11:10:44-04:00</published><updated>2017-10-21T11:10:44-04:00</updated><id>http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover</id><content type="html" xml:base="http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover.html">&lt;p&gt;It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt; is mine and I decided I am going to build and design the page to truly reflect me.&lt;/p&gt;
+
+&lt;p&gt;My first mission was to change the landing page of the URL. I did not like the fact that the user is automatically taken to my blog when the website is pulled up. I wanted a homepage that showed who I am and what skills I have as well as ways to get in contact with me. All the things a web developers site should contain. The tricky part would be integrating this page into my blog without completely messing up accessing the blog or posts I had created. The landing page previously showed condensed forms of 5  blog posts that could be navigated through using ‘Older Posts’ and ‘Newer Posts’. Each post title was a link to the full blog post. I still wanted to use this idea, just did not want it to be the first thing I see on my site.&lt;/p&gt;
+
+&lt;p&gt;In order to ensure I did not jeopardize my blog completely, I created an entirely different GitHub repo for my new landing page. This way I could play around with the structure and styling of the page and not worry about interfering with the blog part at all. I went back to basics, using HTML and CSS. Whenever I make a simple site like this, I break down the buildup into 3 steps – structure, content, and style.&lt;/p&gt;
+
+&lt;p&gt;The structure and content steps aren’t the most thrilling steps but are definitely the most necessary. I divided my landing page into 3 sections – header, main, and footer. The header area contains my beloved graffiti image of my name as well as the navigation of the site. The main area is further separated into 3 sections for information about me, the skills I have and how to get in touch with me.  Lastly, the footer contains my copyright. Once the structure is made and the content is added, the page looks super boring. However, technically, I do not need to do anything else to create a website. It may look like a plain old word document, but I have just built a website.&lt;/p&gt;
+
+&lt;p&gt;Thankfully, I did not stop there. After I finished adding in the content of the site, I went on to the style. From the very beginning, I wanted to ensure my site could easily be accessed from a mobile device as well as a computer screen and look good. I wanted to keep the site neat and ensure my favorite colors were used – Red, Black, White, and Orange. I threw in some grey as well. I styled my site using the mobile first approach. This simply means that the site is initially created for a mobile device or small screen. As the screen gets larger, the elements start to move around. Instead of everything being stacked on top of each other, they are start sitting neatly side by side and the social media sites get labeled.&lt;/p&gt;
+
+&lt;p&gt;I decided to pause here and launch the site in order to get feedback from my friends and family members. This required tackling the most difficult part, integrating the new page into the already built blog. My blog was created using the Jekyll static site generator. Prior to deciding to change my landing page, I had never really dived into the code used to create my blog. After reading through the Jekyll documentation, a few google searches, and a lot of trial and error, I finally got the site to navigate exactly how I wanted. It was a lot simpler than I was making it be. Integrating the new landing page into the blog only took a few steps&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create a new folder in the root folder named ‘blog’ and move the existing index.html page into the new folder&lt;/li&gt;
+  &lt;li&gt;Move the files I created for the new landing page into the root folder of the site&lt;/li&gt;
+  &lt;li&gt;Add one line of code to my &lt;em&gt;_config.yml file&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;paginate_path: &quot;/blog/page:num/&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This additional line of code lets my site know that page numbers for posts are now accessed from &lt;a href=&quot;http://trailynne.org/blog/&quot;&gt;TraiLynne.org/blog/&lt;/a&gt; instead of just &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Done and done. 
+Now my customized landing page is successfully integrated into my blog and I can still access all my blogs and the posts I create.&lt;/p&gt;
+
+&lt;p&gt;I sent my link to my friends and family members to receive feedback and critiques regarding the new landing page. So far I have received a lot of positive feedback and few critiques which lets me know I am heading in the right direction. I am going to work on:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;A professional picture instead of the selfie currently in place&lt;/li&gt;
+  &lt;li&gt;Adding JavaScript to create a more interactive site&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I have also been coming up ways to utilize my blog more often moving forward.  I am planning on using the blog posts to also include projects I complete featuring photos, video walkthroughs and code snippets. I am also a fan of &lt;a href=&quot;https://www.codewars.com/&quot;&gt;Code Wars&lt;/a&gt; so I may include pseudocode, solutions and the explanations to the challenges I complete. There’s no point in having a blog if I’m not going to use it.&lt;/p&gt;
+
+&lt;p&gt;Feel free to reach out and let me know what you think. I am always open to suggestions, ideas, feedback, and critiques. Or even just a chat. &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt; is a work in progress and not even close to being complete. I feel that with a personal portfolio site, the job will never truly be done.  As a web developer, I will be constantly learning and growing therefore my website will need to match this journey and evolution.&lt;/p&gt;
+
+&lt;p&gt;Now comes the hard part… taking a new picture. (I am not a fan of taking pictures)&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project, tech, personal" /><summary type="html">It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. TraiLynne.org is mine and I decided I am going to build and design the page to truly reflect me.</summary></entry></feed>
