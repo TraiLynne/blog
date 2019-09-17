@@ -1,0 +1,26 @@
+title:              Trai Lynne
+email:              TraiLynne@Gmail.com
+description:        Web Developer
+author:             Trai Lynne Compton
+baseurl:            "/blog"
+url:                "https://trailynne.org"
+
+# Social Profiles
+twitter_username:   TraiLynne
+github_username:    TraiLynne
+instagram_username: StartBootstrap
+linkedin_username:  trai-lynne-compton
+
+logo: "/img/logo.jpg"
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:   UA-148153648-1 # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
