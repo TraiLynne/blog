@@ -3,7 +3,8 @@ layout: post
 title:  "Oracle"
 subtitle: Project
 date:   2017-03-27 19:34:07 +0000
-category: project
+categories: project
+background: '/img/posts/bg-default.jpg'
 ---
 
 Getting Started:

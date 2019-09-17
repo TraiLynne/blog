@@ -3,7 +3,8 @@ layout: post
 title:  "Sock Merchant Challenge"
 subtitle: "A Programmers Mind Decoded"
 date:   2019-08-10 10:16:44 -0500
-category: challenge
+categories: challenge
+background: '/img/posts/bg-default.jpg'
 ---
 
 ## Language: JavaScript

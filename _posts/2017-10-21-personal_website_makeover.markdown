@@ -2,7 +2,8 @@
 layout: post
 title:  "Personal Website Makeover"
 date:   2017-10-21 10:10:44 -0500
-category: project, tech, personal
+categories: [project, tech, personal]
+background: '/img/posts/bg-default.jpg'
 ---
 It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. <a href='http://trailynne.org/'>TraiLynne.org</a> is mine and I decided I am going to build and design the page to truly reflect me.
 

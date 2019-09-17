@@ -3,12 +3,13 @@ layout: post
 title:  "Magic 8 Ball"
 subtitle: "Sample Project"
 date:   2018-06-18 20:50:44 -0500
-category: project
+categories: project
+background: '/img/posts/bg-default.jpg'
 ---
 
 Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!
 
-![Project ScreenShot]({{ "../img/magic8ball-screenshot.JPG" | absolute_url }})
+![Project ScreenShot]({{ site.baseurl }}/img/magic8ball-screenshot.JPG.JPG){:.center-img}
 
 # Languages: 
 

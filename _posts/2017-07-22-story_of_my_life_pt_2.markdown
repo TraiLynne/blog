@@ -3,7 +3,8 @@ layout: post
 title:  "Story of My Life"
 subtitle: "Part 2"
 date:   2017-07-22 18:31:54 -0400
-category: project
+categories: project
+background: '/img/posts/bg-default.jpg'
 ---
 
 

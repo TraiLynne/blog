@@ -2,7 +2,8 @@
 layout: post
 title:  "Progress Report"
 date:   2017-08-07 14:12:44 -0500
-category: personal
+categories: personal
+background: '/img/posts/bg-default.jpg'
 ---
 
 

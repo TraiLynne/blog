@@ -3,8 +3,9 @@ layout: post
 title:  "S&J Architects"
 subtitle: "User Interface Project"
 date:   2019-02-06 17:53:44 -0500
-category: project
+categories: project
 tags: [html, css, less, javascript]
+background: '/img/posts/bg-default.jpg'
 ---
 
 I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills.
@@ -21,7 +22,7 @@ The focus of this project was to exercise my ability to build a website from scr
 - <a href='https://github.com/TraiLynne/User-Interface-Project' target='_blank'>Github</a>
 - <a href='http://trailynne.org/User-Interface-Project/' target='_blank'>Live Demo</a>
 
-![Web Pages]({{ "../img/ui-project/IMG_0047.JPG" | absolute_url }})
+![Web Pages]({{ site.baseurl }}/img/ui-project/IMG_0047.JPG){:.center-img}
 
 
 
@@ -47,7 +48,7 @@ After inspecting the design files provided, I noticed the similarities for each 
 	
 ### Static CSS using LESS
 
-![Responsive Design]({{ "../img/ui-project/IMG_0043.JPG" | absolute_url }})
+![Responsive Design]({{ site.baseurl }}/img/ui-project/IMG_0043.JPG){:.center-img}
 
 For this project, I took advantage of the LESS preprocessor. In the past, I had globally installed LESS as well as the `less-watch-compiler` globally to my system. 
 
@@ -59,7 +60,7 @@ The general styles of the page were completed within the main `index.less` file.
 
 ### JavaScript
 
-![Image Carousel]({{ "../img/ui-project/IMG_0048.JPG" | absolute_url }})
+![Image Carousel]({{ site.baseurl }}/img/ui-project/IMG_0048.JPG){:.center-img}
 
 I was inflexible about having an infinite loop for the carousel. A `Carousel` class and a `CarouselCard` class were created to complete the task. The Carousel itself handles the heavy-lifting. It handles the order of the cards and the click handling. The `CarouselCard`s are really just for presentational purposes.
 
@@ -67,7 +68,7 @@ The Header and Navigation system are still being improved. I admit I am not a ma
 
 The Hero area is my favorite area on each page. Most likely because it took the most time in the CSS stage. Or it could be the professional tone that it sets off. It’s such a simple, subtle animation over a picture that sets off a professional tone for the page. I used GreenSock to get this animation up and running.
 
-![Tabbed Cards]({{ "../img/ui-project/IMG_0050.JPG" | absolute_url }})
+![Tabbed Cards]({{ site.baseurl }}/img/ui-project/IMG_0050.JPG){:.center-img}
 
 The tabbed card logic was split by Link and Card. Every `TabLink` is attached to a corresponding `TabCard`. The `TabLink` handles the click handling.  When a tab is clicked, all the cards are checked for the `.active-tab` CSS class. Once there are no cards shown, the tab's card is then given the `.active-tab` class and displayed on the screen.
 

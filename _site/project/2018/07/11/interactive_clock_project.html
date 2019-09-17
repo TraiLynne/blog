@@ -61,8 +61,8 @@
 
   <!-- Page Header -->
 
-  <header class="masthead">
-    
+<header class="masthead" style="background-image: url('/blog/img/posts/bg-default.jpg')">
+  
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -91,9 +91,10 @@
 
         <p>This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.</p>
 
-<p><img src="http://localhost:4000/img/interactive-clock.JPG" alt="Project ScreenShot" /></p>
+<p><img src="/blog/img/interactive-clock.JPG" alt="Project ScreenShot" class="center-img" /></p>
 
 <h1 id="languages">Language(s)</h1>
+
 <ul>
   <li>HTML</li>
   <li>CSS</li>
@@ -101,6 +102,7 @@
 </ul>
 
 <h1 id="links">Links</h1>
+
 <ul>
   <li><a href="https://github.com/TraiLynne/clock-project">GitHub</a></li>
   <li><a href="https://codepen.io/TraiLynne/full/PBwgym/">CodePen</a></li>
@@ -112,13 +114,14 @@
 
 <p>The visual aspects of the page were pretty easy to handle. Basic HTML elements were used for the most part such as a header, image, and a few paragraph tags.</p>
 
-<p>In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked.  The times are split into hour intervals.</p>
+<p>In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked. The times are split into hour intervals.</p>
 
 <p>A ‘button’ element is used to create the “Party Time” option. This button is used to toggle an override of the picture and message shown when it’s time to have fun.</p>
 
 <p>Initially, placeholders are used for the time, image and message that is displayed. JavaScript is used to customize the placeholders.</p>
 
 <h1 id="javascript">JavaScript</h1>
+
 <p>JavaScript is where the interactivity occurs. There’s a lot going on but I will keep the focus on the major jobs that JavaScript is accomplishing in this project.</p>
 
 <p>First off, we have the updateClock function that is used for the real fun. It is a huge sentence basically telling my program if this happens, then do that or else if something else happens, do something else. It is an easy way to tell the clock what message and image to display based on the hour of the day.</p>
@@ -156,34 +159,34 @@
     // display the string on the webpage
     var clock = document.getElementById("clock");
     var currentTime = new Date();
-    
+
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
     var meridian = "AM";
-    
+
     // Set hours
     if (hours &gt;= noon) {
       meridian = "PM";
     }
-    
+
     if (hours &gt; noon) {
         hours = hours - 12;
     }
-    
+
     // Set Minutes
     if (minutes &lt; 10) {
         minutes = "0" + minutes;
     }
-    
+
     // Set Seconds
     if (seconds &lt; 10) {
         seconds = "0" + seconds;
     }
-    
+
     // put together the string that displays the time
     var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian + "!";
-    
+
     clock.innerText = clockTime;
 };
 

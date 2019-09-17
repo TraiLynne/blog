@@ -2,7 +2,8 @@
 layout: post
 title:  "The Wait is Over"
 date:   2018-06-16 15:46:44 -0500
-category: personal
+categories: personal
+background: '/img/posts/bg-default.jpg'
 ---
 
 I've been M.i.A. but I promise it's for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.

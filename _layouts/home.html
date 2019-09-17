@@ -31,7 +31,7 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
-        {% for post in site.posts limit : 5 %}
+        {% comment %} {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
@@ -55,13 +55,157 @@ layout: default
 
         <hr>
 
-        {% endfor %}
+        {% endfor %} {% endcomment %}
 
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
-        </div>
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color: #C13524'>
+          <i class="fas fa-chevron-circle-down"></i> Challenges
+        </button>
+      </h2>
+    </div>
 
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        {% for post in site.categories["challenge"] %}
+          <div class="post-preview">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h2 class="post-title">
+                      {{ post.title }}
+                  </h2>
+                  {% if post.subtitle %}
+                  <h3 class="post-subtitle">
+                      {{ post.subtitle }}
+                  </h3>
+                  {% endif %}
+              </a>
+              <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+          </div>
+      {% endfor %}
       </div>
     </div>
   </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style='color: #C13524'>
+          <i class="fas fa-chevron-circle-down"></i> Projects
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        {% for post in site.categories["project"] %}
+          <div class="post-preview">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h2 class="post-title">
+                      {{ post.title }}
+                  </h2>
+                  {% if post.subtitle %}
+                  <h3 class="post-subtitle">
+                      {{ post.subtitle }}
+                  </h3>
+                  {% endif %}
+              </a>
+              <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style='color: #C13524'>
+          <i class="fas fa-chevron-circle-down"></i> Technology
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        {% for post in site.categories["tech"] %}
+          <div class="post-preview">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h2 class="post-title">
+                      {{ post.title }}
+                  </h2>
+                  {% if post.subtitle %}
+                  <h3 class="post-subtitle">
+                      {{ post.subtitle }}
+                  </h3>
+                  {% endif %}
+              </a>
+              <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingFour">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style='color: #C13524'>
+          <i class="fas fa-chevron-circle-down"></i> Personal
+        </button>
+      </h2>
+    </div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+      <div class="card-body">
+        {% for post in site.categories["personal"] %}
+          <div class="post-preview">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                  <h2 class="post-title">
+                      {{ post.title }}
+                  </h2>
+                  {% if post.subtitle %}
+                  <h3 class="post-subtitle">
+                      {{ post.subtitle }}
+                  </h3>
+                  {% endif %}
+              </a>
+              <p class="post-meta">Posted by
+            {% if post.author %}
+            {{ post.author }}
+            {% else %}
+            {{ site.author }}
+            {% endif %}
+            on
+            {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+          </p>
+          </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Pager -->
+<div class="clearfix">
+  <a class="btn btn-primary float-right" href="{{"/posts" | relative_url }}">View All Posts &rarr;</a>
+</div>

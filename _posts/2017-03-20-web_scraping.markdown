@@ -2,7 +2,8 @@
 layout: post
 title:  "Web Scraping"
 date:   2017-03-20 18:04:07 +0000
-category: tech
+categories: tech
+background: '/img/posts/bg-default.jpg'
 ---
 
 Web scraping is used to extract data from a website. 

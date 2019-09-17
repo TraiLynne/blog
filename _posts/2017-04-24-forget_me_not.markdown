@@ -3,7 +3,8 @@ layout: post
 title:  "ForgetMeNot"
 subtitle: "Project"
 date:   2017-04-24 16:20:00 -0400
-category: project
+categories: project
+background: '/img/posts/bg-default.jpg'
 ---
 
 ## The Idea

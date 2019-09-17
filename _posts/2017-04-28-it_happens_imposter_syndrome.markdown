@@ -3,7 +3,8 @@ layout: post
 title:  "It Happens ... Imposter Syndrome"
 subtitle: "My Battle with Imposter Syndrome"
 date:   2017-04-28 17:32:20 -0400
-category: personal
+categories: personal
+background: '/img/posts/bg-default.jpg'
 ---
 
 So I have come to accept the fact I am a 'victim' of Imposter Syndrome. 

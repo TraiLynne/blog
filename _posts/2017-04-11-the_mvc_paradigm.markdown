@@ -3,7 +3,8 @@ layout: post
 title:  "The MVC Paradigm"
 subtitle: Models, Views, Controllers, Oh My!
 date:   2017-04-11 09:10:40 -0400
-category: tech
+categories: tech
+background: '/img/posts/bg-default.jpg'
 ---
 
 

@@ -61,8 +61,8 @@
 
   <!-- Page Header -->
 
-  <header class="masthead">
-    
+<header class="masthead" style="background-image: url('/blog/img/posts/bg-default.jpg')">
+  
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -90,18 +90,21 @@
       <div class="col-lg-8 col-md-10 mx-auto">
 
         <p>As a codewars beta member I just completed training on the “Find the middle element” kata. <a href="www.codewars.com/r/driA8A">Take the initiation</a> to join me and start training too!
- If you are a member already <a href="http://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript">click here</a> to train on “Find the middle element”.</p>
+If you are a member already <a href="http://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript">click here</a> to train on “Find the middle element”.</p>
 
 <h1 id="training-language">Training Language</h1>
+
 <ul>
   <li>JavaScript</li>
   <li>Ruby</li>
 </ul>
 
 <h1 id="description">Description:</h1>
+
 <p>A function that accepts an input of a triplet of integers and returns the index of the elements whose value falls in the middle. The input to the function will be an array of three ( 3 ) distinct numbers.</p>
 
 <h1 id="decomposition">Decomposition:</h1>
+
 <p>Break the problem down into manageable steps. Smaller problems are easier to solve than one huge one. Once each small step is solved, before you know it, the big one is too.</p>
 
 <ol>
@@ -110,6 +113,7 @@
 </ol>
 
 <h1 id="abstraction">Abstraction:</h1>
+
 <p>Determine what is absolutely necessary to solve the problem. Cut the clutter. Clean, elegant code is the goal.</p>
 
 <ul>
@@ -117,6 +121,7 @@
 </ul>
 
 <h1 id="pattern-recognition">Pattern recognition:</h1>
+
 <p>Is there any step that is being repeated? These usually lead to great functions or loops. Developers love DRY code. DRY meaning Don’t Repeat Yourself. So the DRYer the code, the better.</p>
 
 <ul>
@@ -134,23 +139,26 @@ END FUNCTION
 </code></pre></div></div>
 
 <h1 id="final-code">Final Code</h1>
+
 <h2 id="javascript">JavaScript</h2>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var gimme = function (inputArray) {
-  		function sortedCopy(array) { 
-			return array.concat().sort(function(a, b){ return a - b });
-  		}  
-    var sortedArray = sortedCopy(inputArray);
-    return inputArray.indexOf(sortedArray[1]);
-};
 </code></pre></div></div>
+
+<p>function sortedCopy(array) {
+return array.concat().sort(function(a, b){ return a - b });
+}<br />
+ var sortedArray = sortedCopy(inputArray);
+return inputArray.indexOf(sortedArray[1]);
+};</p>
 
 <h2 id="ruby">Ruby</h2>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def gimme(input_array)
- 		 input_array.index(input_array.sort[1])
-end
 </code></pre></div></div>
+
+<p>input_array.index(input_array.sort[1])
+end</p>
 
 <h1 id="what-did-i-learn">What did I learn?</h1>
 
@@ -162,14 +170,14 @@ end
 
 <p>Ok, moving on. My 2nd problem is I would literally lose the original array. When .sort is called on an array, it reconstructs the original array instead of making a copy and just giving me a new one. My output would always be the index of 1 and I do not want that.</p>
 
-<p>In order to get past these hiccups, I created my own sort function.  Within my function, I create a copy of the original array that I can alter to my liking using the .concat function. It usually is used to join 2 arrays and output a new array of what is combined. I just added my one array and got my copy. I then used the good ol’ .sort function with a little tweak so it can work better with numbers. I did not come up with this tweak on my own, it is a well-known fix to the sort function for sorting numbers.</p>
+<p>In order to get past these hiccups, I created my own sort function. Within my function, I create a copy of the original array that I can alter to my liking using the .concat function. It usually is used to join 2 arrays and output a new array of what is combined. I just added my one array and got my copy. I then used the good ol’ .sort function with a little tweak so it can work better with numbers. I did not come up with this tweak on my own, it is a well-known fix to the sort function for sorting numbers.</p>
 
 <p>I realize that I could have made this function with just one line:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>inputArray.indexOf(inputArray.concat().sort(function(a, b) { return a - b })[1])
 </code></pre></div></div>
 
-<p>I decided I like my version better. If this were a bigger program,  sortedCopy could be called multiple times without having to write it out many times. Because it creates a function that can be called multiple times in the future if needed.</p>
+<p>I decided I like my version better. If this were a bigger program, sortedCopy could be called multiple times without having to write it out many times. Because it creates a function that can be called multiple times in the future if needed.</p>
 
 <h2 id="ruby-1">Ruby</h2>
 

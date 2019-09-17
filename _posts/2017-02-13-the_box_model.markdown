@@ -2,7 +2,8 @@
 layout: post
 title:  "The Box Model"
 date:   2017-02-13 18:02:08 +0000
-category: tech
+categories: tech
+background: '/img/posts/bg-default.jpg'
 ---
 
 

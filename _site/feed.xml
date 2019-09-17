@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-17T17:15:20-04:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Trai Lynne</title><subtitle>Web Developer</subtitle><author><name>Trai Lynne Compton</name></author><entry><title type="html">Sock Merchant Challenge</title><link href="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html" rel="alternate" type="text/html" title="Sock Merchant Challenge" /><published>2019-08-10T11:16:44-04:00</published><updated>2019-08-10T11:16:44-04:00</updated><id>http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html">&lt;h2 id=&quot;language-javascript&quot;&gt;Language: JavaScript&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2019-09-17T19:30:09-04:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">Trai Lynne</title><subtitle>Web Developer</subtitle><author><name>Trai Lynne Compton</name></author><entry><title type="html">Sock Merchant Challenge</title><link href="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html" rel="alternate" type="text/html" title="Sock Merchant Challenge" /><published>2019-08-10T11:16:44-04:00</published><updated>2019-08-10T11:16:44-04:00</updated><id>http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2019/08/10/sock_merchant_challenge.html">&lt;h2 id=&quot;language-javascript&quot;&gt;Language: JavaScript&lt;/h2&gt;
 
 &lt;h1 id=&quot;the-problem&quot;&gt;The Problem&lt;/h1&gt;
 
@@ -123,7 +123,7 @@ All the tests pass with flying colors!&lt;/p&gt;
 
 &lt;p&gt;My journey is far from over. There is so much more to come. I’m excited to continue and will use my blog to keep me accountable.&lt;/p&gt;
 
-&lt;p&gt;Want to strengthen your skills as well? Check out &lt;a href=&quot;https://www.hackerrank.com&quot; target=&quot;_blank&quot;&gt;HackerRank&lt;/a&gt; to get in your practice. I am currently completing the Interview Preparation Kit.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">Language: JavaScript</summary></entry><entry><title type="html">S&amp;amp;J Architects</title><link href="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html" rel="alternate" type="text/html" title="S&amp;J Architects" /><published>2019-02-06T17:53:44-05:00</published><updated>2019-02-06T17:53:44-05:00</updated><id>http://localhost:4000/blog/project/2019/02/06/user_interface_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html">&lt;p&gt;I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills.&lt;/p&gt;
+&lt;p&gt;Want to strengthen your skills as well? Check out &lt;a href=&quot;https://www.hackerrank.com&quot; target=&quot;_blank&quot;&gt;HackerRank&lt;/a&gt; to get in your practice. I am currently completing the Interview Preparation Kit.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">Language: JavaScript</summary></entry><entry><title type="html">S&amp;amp;J Architects</title><link href="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html" rel="alternate" type="text/html" title="S&amp;J Architects" /><published>2019-02-06T17:53:44-05:00</published><updated>2019-02-06T17:53:44-05:00</updated><id>http://localhost:4000/blog/project/2019/02/06/user_interface_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2019/02/06/user_interface_project.html">&lt;p&gt;I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills.&lt;/p&gt;
 
 &lt;p&gt;The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.&lt;/p&gt;
 
@@ -141,7 +141,7 @@ All the tests pass with flying colors!&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://trailynne.org/User-Interface-Project/&quot; target=&quot;_blank&quot;&gt;Live Demo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0047.JPG&quot; alt=&quot;Web Pages&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/ui-project/IMG_0047.JPG&quot; alt=&quot;Web Pages&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
 
@@ -165,7 +165,7 @@ All the tests pass with flying colors!&lt;/p&gt;
 
 &lt;h3 id=&quot;static-css-using-less&quot;&gt;Static CSS using LESS&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0043.JPG&quot; alt=&quot;Responsive Design&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/ui-project/IMG_0043.JPG&quot; alt=&quot;Responsive Design&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For this project, I took advantage of the LESS preprocessor. In the past, I had globally installed LESS as well as the &lt;code class=&quot;highlighter-rouge&quot;&gt;less-watch-compiler&lt;/code&gt; globally to my system.&lt;/p&gt;
 
@@ -177,7 +177,7 @@ All the tests pass with flying colors!&lt;/p&gt;
 
 &lt;h3 id=&quot;javascript&quot;&gt;JavaScript&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0048.JPG&quot; alt=&quot;Image Carousel&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/ui-project/IMG_0048.JPG&quot; alt=&quot;Image Carousel&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I was inflexible about having an infinite loop for the carousel. A &lt;code class=&quot;highlighter-rouge&quot;&gt;Carousel&lt;/code&gt; class and a &lt;code class=&quot;highlighter-rouge&quot;&gt;CarouselCard&lt;/code&gt; class were created to complete the task. The Carousel itself handles the heavy-lifting. It handles the order of the cards and the click handling. The &lt;code class=&quot;highlighter-rouge&quot;&gt;CarouselCard&lt;/code&gt;s are really just for presentational purposes.&lt;/p&gt;
 
@@ -185,7 +185,7 @@ All the tests pass with flying colors!&lt;/p&gt;
 
 &lt;p&gt;The Hero area is my favorite area on each page. Most likely because it took the most time in the CSS stage. Or it could be the professional tone that it sets off. It’s such a simple, subtle animation over a picture that sets off a professional tone for the page. I used GreenSock to get this animation up and running.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/ui-project/IMG_0050.JPG&quot; alt=&quot;Tabbed Cards&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/ui-project/IMG_0050.JPG&quot; alt=&quot;Tabbed Cards&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The tabbed card logic was split by Link and Card. Every &lt;code class=&quot;highlighter-rouge&quot;&gt;TabLink&lt;/code&gt; is attached to a corresponding &lt;code class=&quot;highlighter-rouge&quot;&gt;TabCard&lt;/code&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;TabLink&lt;/code&gt; handles the click handling.  When a tab is clicked, all the cards are checked for the &lt;code class=&quot;highlighter-rouge&quot;&gt;.active-tab&lt;/code&gt; CSS class. Once there are no cards shown, the tab’s card is then given the &lt;code class=&quot;highlighter-rouge&quot;&gt;.active-tab&lt;/code&gt; class and displayed on the screen.&lt;/p&gt;
 
@@ -202,11 +202,12 @@ All the tests pass with flying colors!&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;http://lesscss.org/&quot; taget=&quot;_blank&quot;&gt;LESS&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.javascript.com/&quot; target=&quot;_blank&quot;&gt;JavaScript&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://greensock.com/&quot; target=&quot;_blank&quot;&gt;GreenSock&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><category term="html" /><category term="css" /><category term="less" /><category term="javascript" /><summary type="html">I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills. The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.</summary></entry><entry><title type="html">Interactive Clock</title><link href="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html" rel="alternate" type="text/html" title="Interactive Clock" /><published>2018-07-11T18:53:44-04:00</published><updated>2018-07-11T18:53:44-04:00</updated><id>http://localhost:4000/blog/project/2018/07/11/interactive_clock_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html">&lt;p&gt;This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><category term="html" /><category term="css" /><category term="less" /><category term="javascript" /><summary type="html">I was given the task to build a custom marketing page for an architectural firm named Smith and Jones Architects as a school project. The projects minimum viable product (MVP) included building the layout and designing a multipage site. We had just covered HTML, CSS/LESS, and JavaScript in school. Now, it was time to prove my skills. The focus of this project was to exercise my ability to build a website from scratch using assets, content, and instructions.</summary></entry><entry><title type="html">Interactive Clock</title><link href="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html" rel="alternate" type="text/html" title="Interactive Clock" /><published>2018-07-11T18:53:44-04:00</published><updated>2018-07-11T18:53:44-04:00</updated><id>http://localhost:4000/blog/project/2018/07/11/interactive_clock_project</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/07/11/interactive_clock_project.html">&lt;p&gt;This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/interactive-clock.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/interactive-clock.JPG&quot; alt=&quot;Project ScreenShot&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;languages&quot;&gt;Language(s)&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;HTML&lt;/li&gt;
   &lt;li&gt;CSS&lt;/li&gt;
@@ -214,6 +215,7 @@ All the tests pass with flying colors!&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;links&quot;&gt;Links&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/clock-project&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://codepen.io/TraiLynne/full/PBwgym/&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
@@ -225,13 +227,14 @@ All the tests pass with flying colors!&lt;/p&gt;
 
 &lt;p&gt;The visual aspects of the page were pretty easy to handle. Basic HTML elements were used for the most part such as a header, image, and a few paragraph tags.&lt;/p&gt;
 
-&lt;p&gt;In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked.  The times are split into hour intervals.&lt;/p&gt;
+&lt;p&gt;In order to decide a time for “Wake Up”, “Lunch”, and “Nap”, the ‘select’ tag was used and the options provided are hour intervals. When clicked, the ‘select’ tag creates a drop-down list of the options that can be picked. The times are split into hour intervals.&lt;/p&gt;
 
 &lt;p&gt;A ‘button’ element is used to create the “Party Time” option. This button is used to toggle an override of the picture and message shown when it’s time to have fun.&lt;/p&gt;
 
 &lt;p&gt;Initially, placeholders are used for the time, image and message that is displayed. JavaScript is used to customize the placeholders.&lt;/p&gt;
 
 &lt;h1 id=&quot;javascript&quot;&gt;JavaScript&lt;/h1&gt;
+
 &lt;p&gt;JavaScript is where the interactivity occurs. There’s a lot going on but I will keep the focus on the major jobs that JavaScript is accomplishing in this project.&lt;/p&gt;
 
 &lt;p&gt;First off, we have the updateClock function that is used for the real fun. It is a huge sentence basically telling my program if this happens, then do that or else if something else happens, do something else. It is an easy way to tell the clock what message and image to display based on the hour of the day.&lt;/p&gt;
@@ -269,34 +272,34 @@ All the tests pass with flying colors!&lt;/p&gt;
     // display the string on the webpage
     var clock = document.getElementById(&quot;clock&quot;);
     var currentTime = new Date();
-    
+
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
     var meridian = &quot;AM&quot;;
-    
+
     // Set hours
     if (hours &amp;gt;= noon) {
       meridian = &quot;PM&quot;;
     }
-    
+
     if (hours &amp;gt; noon) {
         hours = hours - 12;
     }
-    
+
     // Set Minutes
     if (minutes &amp;lt; 10) {
         minutes = &quot;0&quot; + minutes;
     }
-    
+
     // Set Seconds
     if (seconds &amp;lt; 10) {
         seconds = &quot;0&quot; + seconds;
     }
-    
+
     // put together the string that displays the time
     var clockTime = hours + &quot;:&quot; + minutes + &quot;:&quot; + seconds + &quot; &quot; + meridian + &quot;!&quot;;
-    
+
     clock.innerText = clockTime;
 };
 
@@ -323,19 +326,22 @@ var partyEvent = function() {
 
 &lt;p&gt;From there, it’s all about having JavaScript listen for the right event so the page can be updated correctly. A few even listeners added were any changes made to the time selectors for waking up, lunch, and nap time. We also needed it to watch out for that Party Time button to be clicked.&lt;/p&gt;
 
-&lt;p&gt;Ta-Da !! The interactive clock is ready for action.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><category term="javascript" /><category term="ruby" /><summary type="html">This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.</summary></entry><entry><title type="html">Find the Middle Element</title><link href="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html" rel="alternate" type="text/html" title="Find the Middle Element" /><published>2018-07-11T14:45:44-04:00</published><updated>2018-07-11T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html">&lt;p&gt;As a codewars beta member I just completed training on the “Find the middle element” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!
- If you are a member already &lt;a href=&quot;http://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript&quot;&gt;click here&lt;/a&gt; to train on “Find the middle element”.&lt;/p&gt;
+&lt;p&gt;Ta-Da !! The interactive clock is ready for action.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="javascript" /><category term="ruby" /><summary type="html">This interactive clock is a fun project for all ages! With fun photos and messages, this clock can be customized to fit any style.</summary></entry><entry><title type="html">Find the Middle Element</title><link href="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html" rel="alternate" type="text/html" title="Find the Middle Element" /><published>2018-07-11T14:45:44-04:00</published><updated>2018-07-11T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/11/find_the_middle_element.html">&lt;p&gt;As a codewars beta member I just completed training on the “Find the middle element” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!
+If you are a member already &lt;a href=&quot;http://www.codewars.com/kata/545a4c5a61aa4c6916000755/train/javascript&quot;&gt;click here&lt;/a&gt; to train on “Find the middle element”.&lt;/p&gt;
 
 &lt;h1 id=&quot;training-language&quot;&gt;Training Language&lt;/h1&gt;
+
 &lt;ul&gt;
   &lt;li&gt;JavaScript&lt;/li&gt;
   &lt;li&gt;Ruby&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;description&quot;&gt;Description:&lt;/h1&gt;
+
 &lt;p&gt;A function that accepts an input of a triplet of integers and returns the index of the elements whose value falls in the middle. The input to the function will be an array of three ( 3 ) distinct numbers.&lt;/p&gt;
 
 &lt;h1 id=&quot;decomposition&quot;&gt;Decomposition:&lt;/h1&gt;
+
 &lt;p&gt;Break the problem down into manageable steps. Smaller problems are easier to solve than one huge one. Once each small step is solved, before you know it, the big one is too.&lt;/p&gt;
 
 &lt;ol&gt;
@@ -344,6 +350,7 @@ var partyEvent = function() {
 &lt;/ol&gt;
 
 &lt;h1 id=&quot;abstraction&quot;&gt;Abstraction:&lt;/h1&gt;
+
 &lt;p&gt;Determine what is absolutely necessary to solve the problem. Cut the clutter. Clean, elegant code is the goal.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -351,6 +358,7 @@ var partyEvent = function() {
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;pattern-recognition&quot;&gt;Pattern recognition:&lt;/h1&gt;
+
 &lt;p&gt;Is there any step that is being repeated? These usually lead to great functions or loops. Developers love DRY code. DRY meaning Don’t Repeat Yourself. So the DRYer the code, the better.&lt;/p&gt;
 
 &lt;ul&gt;
@@ -368,23 +376,26 @@ END FUNCTION
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;final-code&quot;&gt;Final Code&lt;/h1&gt;
+
 &lt;h2 id=&quot;javascript&quot;&gt;JavaScript&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;var gimme = function (inputArray) {
-  		function sortedCopy(array) { 
-			return array.concat().sort(function(a, b){ return a - b });
-  		}  
-    var sortedArray = sortedCopy(inputArray);
-    return inputArray.indexOf(sortedArray[1]);
-};
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;function sortedCopy(array) {
+return array.concat().sort(function(a, b){ return a - b });
+}&lt;br /&gt;
+ var sortedArray = sortedCopy(inputArray);
+return inputArray.indexOf(sortedArray[1]);
+};&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby&quot;&gt;Ruby&lt;/h2&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def gimme(input_array)
- 		 input_array.index(input_array.sort[1])
-end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;input_array.index(input_array.sort[1])
+end&lt;/p&gt;
 
 &lt;h1 id=&quot;what-did-i-learn&quot;&gt;What did I learn?&lt;/h1&gt;
 
@@ -396,20 +407,20 @@ end
 
 &lt;p&gt;Ok, moving on. My 2nd problem is I would literally lose the original array. When .sort is called on an array, it reconstructs the original array instead of making a copy and just giving me a new one. My output would always be the index of 1 and I do not want that.&lt;/p&gt;
 
-&lt;p&gt;In order to get past these hiccups, I created my own sort function.  Within my function, I create a copy of the original array that I can alter to my liking using the .concat function. It usually is used to join 2 arrays and output a new array of what is combined. I just added my one array and got my copy. I then used the good ol’ .sort function with a little tweak so it can work better with numbers. I did not come up with this tweak on my own, it is a well-known fix to the sort function for sorting numbers.&lt;/p&gt;
+&lt;p&gt;In order to get past these hiccups, I created my own sort function. Within my function, I create a copy of the original array that I can alter to my liking using the .concat function. It usually is used to join 2 arrays and output a new array of what is combined. I just added my one array and got my copy. I then used the good ol’ .sort function with a little tweak so it can work better with numbers. I did not come up with this tweak on my own, it is a well-known fix to the sort function for sorting numbers.&lt;/p&gt;
 
 &lt;p&gt;I realize that I could have made this function with just one line:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;inputArray.indexOf(inputArray.concat().sort(function(a, b) { return a - b })[1])
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I decided I like my version better. If this were a bigger program,  sortedCopy could be called multiple times without having to write it out many times. Because it creates a function that can be called multiple times in the future if needed.&lt;/p&gt;
+&lt;p&gt;I decided I like my version better. If this were a bigger program, sortedCopy could be called multiple times without having to write it out many times. Because it creates a function that can be called multiple times in the future if needed.&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-1&quot;&gt;Ruby&lt;/h2&gt;
 
 &lt;p&gt;With Ruby, the .sort function outputs a new array without adjusting the original array. I simply sorted the array and located the index of the element within the original array that holds the same value as the middle element of the sorted array.&lt;/p&gt;
 
-&lt;p&gt;Since I did not have to create a new function or any special tricks, I created one clean line that gets straight to the output.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">As a codewars beta member I just completed training on the “Find the middle element” kata. Take the initiation to join me and start training too! If you are a member already click here to train on “Find the middle element”.</summary></entry><entry><title type="html">Sum of Positive</title><link href="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html" rel="alternate" type="text/html" title="Sum of Positive" /><published>2018-07-05T14:45:44-04:00</published><updated>2018-07-05T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html">&lt;p&gt;As a CodeWars beta member, I just completed training on the “Sum of positive” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!&lt;/p&gt;
+&lt;p&gt;Since I did not have to create a new function or any special tricks, I created one clean line that gets straight to the output.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">As a codewars beta member I just completed training on the “Find the middle element” kata. Take the initiation to join me and start training too! If you are a member already click here to train on “Find the middle element”.</summary></entry><entry><title type="html">Sum of Positive</title><link href="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html" rel="alternate" type="text/html" title="Sum of Positive" /><published>2018-07-05T14:45:44-04:00</published><updated>2018-07-05T14:45:44-04:00</updated><id>http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive</id><content type="html" xml:base="http://localhost:4000/blog/challenge/2018/07/05/sum_of_positive.html">&lt;p&gt;As a CodeWars beta member, I just completed training on the “Sum of positive” kata. &lt;a href=&quot;www.codewars.com/r/driA8A&quot;&gt;Take the initiation&lt;/a&gt; to join me and start training too!&lt;/p&gt;
 
 &lt;p&gt;If you are a member already &lt;a href=&quot;http://www.codewars.com/kata/5715eaedb436cf5606000381/train/javascript&quot;&gt;click here&lt;/a&gt; to train on “Sum of positive”.&lt;/p&gt;
 
@@ -521,9 +532,9 @@ RETURN sum value
 
 &lt;p&gt;This is where the positive elements in the array returned by the filter() function are added together.&lt;/p&gt;
 
-&lt;p&gt;For more information on JavaScript reduce() function, check it out &lt;a href=&quot;https://www.w3schools.com/jsref/jsref_reduce.asp&quot;&gt;here&lt;/a&gt; on W3 Schools.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="challenge" /><summary type="html">As a CodeWars beta member, I just completed training on the “Sum of positive” kata. Take the initiation to join me and start training too!</summary></entry><entry><title type="html">Jubilee Austen</title><link href="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html" rel="alternate" type="text/html" title="Jubilee Austen" /><published>2018-06-27T17:30:44-04:00</published><updated>2018-06-27T17:30:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/27/jubilee_austen</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html">&lt;p&gt;A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.&lt;/p&gt;
+&lt;p&gt;For more information on JavaScript reduce() function, check it out &lt;a href=&quot;https://www.w3schools.com/jsref/jsref_reduce.asp&quot;&gt;here&lt;/a&gt; on W3 Schools.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">As a CodeWars beta member, I just completed training on the “Sum of positive” kata. Take the initiation to join me and start training too!</summary></entry><entry><title type="html">Jubilee Austen</title><link href="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html" rel="alternate" type="text/html" title="Jubilee Austen" /><published>2018-06-27T17:30:44-04:00</published><updated>2018-06-27T17:30:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/27/jubilee_austen</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/27/jubilee_austen.html">&lt;p&gt;A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/full-screen.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/full-screen.JPG&quot; alt=&quot;Project ScreenShot&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;languages&quot;&gt;Languages:&lt;/h2&gt;
 &lt;ul&gt;
@@ -543,13 +554,13 @@ RETURN sum value
 
 &lt;h1 id=&quot;get-their-attention&quot;&gt;Get Their Attention!&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/header.JPG&quot; alt=&quot;Header&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/header.JPG&quot; alt=&quot;Header&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The header displays an eye-catching tagline that is sure to capture the attention of the viewer as soon as the page loads.  Let your audience know right away why you are the one for the job.&lt;/p&gt;
 
 &lt;h1 id=&quot;let-them-know-who-you-are&quot;&gt;Let Them Know Who You Are!&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/about.JPG&quot; alt=&quot;About Section&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/about.JPG&quot; alt=&quot;About Section&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Relate to your public by providing a little information about yourself here. Let them know you are human. You can highlight your background, your likes or dislikes, your journey in your career field. This can be literally anything you want to say, the sky is not even the limit.&lt;/p&gt;
 
@@ -557,20 +568,20 @@ RETURN sum value
 
 &lt;h1 id=&quot;show-off-your-skills&quot;&gt;Show Off Your Skills!&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/work.JPG&quot; alt=&quot;Work Section&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/work.JPG&quot; alt=&quot;Work Section&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Think of this as a mix of your resume and your trophy shelf. This is the segment where you get to show off, brag a little! Show the world what you can do. This also gives your viewers a chance to see if your skills fit their needs.
 It can be a description of the skills you have, links to examples of your work, powerful praise from people you partnered with in the past, etc. Either way, be proud of your abilities and what you have accomplished. Display it for the world to see!&lt;/p&gt;
 
 &lt;h1 id=&quot;contact-information&quot;&gt;Contact Information&lt;/h1&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/contact.JPG&quot; alt=&quot;Contact Section&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/contact.JPG&quot; alt=&quot;Contact Section&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Providing multiple points of contact is key. Not everyone is a fan of talking on the phone, I know I’m not. There are also some people who only use their email address to store spam and coupons. By providing options, you’ll never miss an opportunity to connect with someone. Plus if you display your skills via social media, you give people a chance to follow you and keep up with your latest accomplishments.&lt;/p&gt;
 
-&lt;p&gt;Regardless of your expertise, a portfolio webpage will launch your career or business to new levels!&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.</summary></entry><entry><title type="html">Magic 8 Ball</title><link href="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html" rel="alternate" type="text/html" title="Magic 8 Ball" /><published>2018-06-18T21:50:44-04:00</published><updated>2018-06-18T21:50:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/18/magic_8_ball</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html">&lt;p&gt;Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!&lt;/p&gt;
+&lt;p&gt;Regardless of your expertise, a portfolio webpage will launch your career or business to new levels!&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">A beautifully crafted portfolio webpage that is simple and gets the point across. This portfolio can be altered and customized to fit the needs of anybody that wants to display their skills.</summary></entry><entry><title type="html">Magic 8 Ball</title><link href="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html" rel="alternate" type="text/html" title="Magic 8 Ball" /><published>2018-06-18T21:50:44-04:00</published><updated>2018-06-18T21:50:44-04:00</updated><id>http://localhost:4000/blog/project/2018/06/18/magic_8_ball</id><content type="html" xml:base="http://localhost:4000/blog/project/2018/06/18/magic_8_ball.html">&lt;p&gt;Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/magic8ball-screenshot.JPG&quot; alt=&quot;Project ScreenShot&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/img/magic8ball-screenshot.JPG.JPG&quot; alt=&quot;Project ScreenShot&quot; class=&quot;center-img&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;languages&quot;&gt;Languages:&lt;/h1&gt;
 
@@ -609,7 +620,7 @@ It can be a description of the skills you have, links to examples of your work, 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://codepen.io/TraiLynne/pen/LrejrE/&quot; target=&quot;_blank&quot;&gt;CodePen&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/TraiLynne/magic-8-ball&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!</summary></entry><entry><title type="html">The Wait is Over</title><link href="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html" rel="alternate" type="text/html" title="The Wait is Over" /><published>2018-06-16T16:46:44-04:00</published><updated>2018-06-16T16:46:44-04:00</updated><id>http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over</id><content type="html" xml:base="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html">&lt;p&gt;I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">Do you remember the Magic 8-Ball from back in the day? You would ask it a question, shake the ball vigorously and get back an answer that may or may not apply to the question. Well, welcome to the old-school classic turned new school!</summary></entry><entry><title type="html">The Wait is Over</title><link href="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html" rel="alternate" type="text/html" title="The Wait is Over" /><published>2018-06-16T16:46:44-04:00</published><updated>2018-06-16T16:46:44-04:00</updated><id>http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over</id><content type="html" xml:base="http://localhost:4000/blog/personal/2018/06/16/the_wait_is_over.html">&lt;p&gt;I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.&lt;/p&gt;
 
 &lt;p&gt;For starters, I decided to relaunch my portfolio website and I am extremely proud of the finished product. This needed to be done for a few reasons but mainly because I felt it did not properly reflect the progress I have made in my coding journey. I adored my old website but as soon as it launched I knew I could do better and I made it happen. I feel the current website is a proper representation of my skills.&lt;/p&gt;
 
@@ -625,65 +636,7 @@ It can be a description of the skills you have, links to examples of your work, 
 
 &lt;p&gt;I will continuously update the site with the products of these actions, so be on the lookout for new content and features coming soon!&lt;/p&gt;
 
-&lt;p&gt;-Trai Lynne.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="personal" /><summary type="html">I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.</summary></entry><entry><title type="html">Rogue Pickings</title><link href="http://localhost:4000/blog/project/2017/10/26/rogue_pickings.html" rel="alternate" type="text/html" title="Rogue Pickings" /><published>2017-10-26T15:00:44-04:00</published><updated>2017-10-26T15:00:44-04:00</updated><id>http://localhost:4000/blog/project/2017/10/26/rogue_pickings</id><content type="html" xml:base="http://localhost:4000/blog/project/2017/10/26/rogue_pickings.html">&lt;p&gt;Rogue Pickings is a beautifully created static webpage with a layout and design that can be easily adjusted to fit the needs of any type of company.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/fullsite_zpsgjaguoiz.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Full photo fullsite_zpsgjaguoiz.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;See the &lt;a href=&quot;https://github.com/TraiLynne/rogue_pickings&quot; target=&quot;_blank&quot;&gt;Rogue Pickings Repo&lt;/a&gt; on GitHub.&lt;/p&gt;
-
-&lt;p&gt;See the Pen &lt;a href=&quot;https://codepen.io/TraiLYNNE/full/wPvjez&quot; target=&quot;_blank&quot;&gt;Rogue Pickings Pen&lt;/a&gt; on CodePen.&lt;/p&gt;
-
-&lt;h2 id=&quot;process&quot;&gt;Process&lt;/h2&gt;
-&lt;p&gt;For a simple static website, I follow a three step process – structure, content, and style. The structure and content steps are the easiest, yet most unattractive steps. For me, the style step is always the most fun.&lt;/p&gt;
-
-&lt;p&gt;To start the project, I was provided a PSD file for the site via &lt;a href=&quot;https://skillcrush.com/&quot; target=&quot;_blank&quot;&gt;Skillcrush&lt;/a&gt;. I also grab a copy of the &lt;a href=&quot;https://html5boilerplate.com/&quot; target=&quot;_blank&quot;&gt;HTML5 Boilerplate&lt;/a&gt; files and load them into my root directory. I use Git and GitHub throughout the entire process saving and committing my work at appropriate times.&lt;/p&gt;
-
-&lt;p&gt;Before adding any words, pictures, or other viewable content to my HTML file, I set up the structural tags. ‘Rogue Pickings’ is separated into three areas – Header, Main, and Footer. I further break down the structure as necessary based on the layout of the site. Once all the structural tags are in place, I begin adding in the content. For this project, the tags I use are paragraph tags, h1-h3 header tags, an image tag and a couple unordered lists. Lastly, I pull up the HTML file in Google Chrome to begin styling the site, refreshing the page throughout the process to make sure everything looks just right.&lt;/p&gt;
-
-&lt;p&gt;For this site, I set up my CSS file by listing out all the tags, classes, and IDs first - from the outside in and top to bottom - with each having its own curly brackets. This helped me to organize the CSS file based on sections. If any of the tags aren’t used, I simply erase the tag and curly braces from the file to avoid unnecessary clutter.&lt;/p&gt;
-
-&lt;h3 id=&quot;header-area&quot;&gt;Header Area&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/header_zpssztqozcm.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Header photo header_zpssztqozcm.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;structure--content&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
-&lt;p&gt;The header area contains two levels of nested div tags. The first level is part of the full-width class. The second level contains two  div tags of the half-width class. The first half of the header contains the logo “Rogue Pickings”. The second half contains the nav tag which holds a unordered list to display the navigation. Since this is a one-page site, the navigation does not contain actual links. (On the plus side, this allows me to build on to the site and add new pages in the future)&lt;/p&gt;
-
-&lt;h4 id=&quot;style&quot;&gt;Style&lt;/h4&gt;
-&lt;p&gt;Overall, any div tags with the class of full-width are a total of 1200px wide throughout the page. The divs with half-width are 600px wide. There are also third-width divs each 400px wide used later in the main area of the page. The half-width and third-width divs are floated to the left so the information is displayed neatly sitting side by side on the page.&lt;/p&gt;
-
-&lt;p&gt;In the header area, all the words are transformed into uppercase letters. There is also a border at the bottom of full-width div that is a light green color used as a type of highlight throughout the page.&lt;/p&gt;
-
-&lt;p&gt;The h1 tag for the logo has an inline tag called span. This allowed me to make ‘Rogue’ the same light green color used for the border and keep ‘Pickings’ the basic black color. I added padding to the top and bottom of the H1 tag to keep it from being directly on the edge of the page. In order to get the measurement for any padding used throughout the page, I used the ruler tool in Photoshop.&lt;/p&gt;
-
-&lt;p&gt;The navigation took some trial and error. In order to make the navigation options sit side-by-side, I had them float to the right of the page. The words are changed to light green. To keep the words from being right next to each other, I added a small amount of padding to the left of each word.&lt;/p&gt;
-
-&lt;p&gt;I did have a little hiccup while styling the header. Although I specified that the border was at the bottom of the header, it kept ending up at the top of the page. Since the half-width divs were floated to the left, they were actually removed from the flow of the page. Basically, the header area was now empty in a way. To alleviate this issue, I used the overflow property and set it to auto.&lt;/p&gt;
-
-&lt;h3 id=&quot;main-area&quot;&gt;Main Area&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/main_zps88sqgcdf.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Main photo main_zps88sqgcdf.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;structure--content-1&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
-&lt;p&gt;The main area is separated into two section tags with IDs that are easy to remember: top and bottom.&lt;/p&gt;
-
-&lt;p&gt;The top section has one nested div tag that is part of the full-width class. The div holds an image, a level two header, and a paragraph.&lt;/p&gt;
-
-&lt;p&gt;The bottom section also holds a full-width div which is then separated into three nested divs of the third-width class. Each of the three divs has a third level header tag. The first of the three divs has the ID ‘specials’ and a unordered list of the day’s specials. The second div with the id of ‘reviews’ has a paragraph tag to highlight one review. The last div has the ID ‘contact’. I used a paragraph tag to hold the address and contact number for the company. In order to get the contact information split into the lines I needed, I used break tags.&lt;/p&gt;
-
-&lt;h4 id=&quot;style-1&quot;&gt;Style&lt;/h4&gt;
-
-&lt;p&gt;The top section is pretty straightforward. I added a border to the bottom of the image using the same specifications as the border at the bottom of the header area. The h2 tag used for the headline is transformed into uppercase letters and changed to the light green color. I added a little bit of padding to the top of the headline in order to give the words some space from the bottom of the image. The paragraph includes an adjusted line height (the space between the top of one line to the top of the next line). I set the property a few pixels bigger than the font size in order to make the paragraph easier to read.&lt;/p&gt;
-
-&lt;p&gt;The bottom section required more time since each third required its own special attention to display correctly. The full-width div in the bottom section includes a thin light grey border.  All of the H3 tags were transformed into uppercase letters. A small amount of padding was added to the top of the headers in order to keep them from being too close to the border. The specials div contains a unordered list. Typically, a list automatically comes with bullet points or numbers. I changed the list-style and padding properties off to remove the bullet points. Each list item is the signature light green color. I also added the same thin grey border to the left of the ‘specials’ and ‘reviews div to easily see the different areas. The reviews and contact divs adds padding around header and paragraph tags to keep the words near the center of the div. The line height of the paragraph is also increased to improve readability.&lt;/p&gt;
-
-&lt;h3 id=&quot;footer-area&quot;&gt;Footer Area&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;http://i58.photobucket.com/albums/g244/TraiLYNNE/footer_zpsc1cre5gg.jpg&quot; border=&quot;0&quot; alt=&quot;Rogue Pickings Footer photo footer_zpsc1cre5gg.jpg&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;structure--content-2&quot;&gt;Structure &amp;amp; Content&lt;/h4&gt;
-&lt;p&gt;The footer area is nested with one full-width class div. Within the div is a level two header tag. The word ‘fresh’ is surrounded by an inline span tag in order for the word to be styled differently than the rest of the sentence.&lt;/p&gt;
-
-&lt;h4 id=&quot;style-2&quot;&gt;Style&lt;/h4&gt;
-&lt;p&gt;The top of the footer area is bordered by the same thin grey line used for the bottom section of the main area. The H2 tag is aligned to the center with padding added to both the top and bottom of the sentence. All the words are transformed to uppercase. Once I focused in on the word ‘fresh’ held between the span tags, I transform the text to lower case and change the color from black to light green. The font defaults to Wisdom Script which is a downloaded OpenType Font (.otf) file held in the fonts folder of the root directory. Since not all computers are able to read the font file (including mine) I found a backup Google Font named Dancing Script which I linked to the HTML file. If all else fails, the cursive font is the last line of defense.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project" /><summary type="html">Rogue Pickings is a beautifully created static webpage with a layout and design that can be easily adjusted to fit the needs of any type of company.</summary></entry><entry><title type="html">Personal Website Makeover</title><link href="http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover.html" rel="alternate" type="text/html" title="Personal Website Makeover" /><published>2017-10-21T11:10:44-04:00</published><updated>2017-10-21T11:10:44-04:00</updated><id>http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover</id><content type="html" xml:base="http://localhost:4000/blog/project,%20tech,%20personal/2017/10/21/personal_website_makeover.html">&lt;p&gt;It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt; is mine and I decided I am going to build and design the page to truly reflect me.&lt;/p&gt;
+&lt;p&gt;-Trai Lynne.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">I’ve been M.i.A. but I promise it’s for a good reason. I have been hard at work learning and improving my skills in order to confidently make my next move.</summary></entry><entry><title type="html">Personal Website Makeover</title><link href="http://localhost:4000/blog/project/tech/personal/2017/10/21/personal_website_makeover.html" rel="alternate" type="text/html" title="Personal Website Makeover" /><published>2017-10-21T11:10:44-04:00</published><updated>2017-10-21T11:10:44-04:00</updated><id>http://localhost:4000/blog/project/tech/personal/2017/10/21/personal_website_makeover</id><content type="html" xml:base="http://localhost:4000/blog/project/tech/personal/2017/10/21/personal_website_makeover.html">&lt;p&gt;It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt; is mine and I decided I am going to build and design the page to truly reflect me.&lt;/p&gt;
 
 &lt;p&gt;My first mission was to change the landing page of the URL. I did not like the fact that the user is automatically taken to my blog when the website is pulled up. I wanted a homepage that showed who I am and what skills I have as well as ways to get in contact with me. All the things a web developers site should contain. The tricky part would be integrating this page into my blog without completely messing up accessing the blog or posts I had created. The landing page previously showed condensed forms of 5  blog posts that could be navigated through using ‘Older Posts’ and ‘Newer Posts’. Each post title was a link to the full blog post. I still wanted to use this idea, just did not want it to be the first thing I see on my site.&lt;/p&gt;
 
@@ -718,4 +671,10 @@ Now my customized landing page is successfully integrated into my blog and I can
 
 &lt;p&gt;Feel free to reach out and let me know what you think. I am always open to suggestions, ideas, feedback, and critiques. Or even just a chat. &lt;a href=&quot;http://trailynne.org/&quot;&gt;TraiLynne.org&lt;/a&gt; is a work in progress and not even close to being complete. I feel that with a personal portfolio site, the job will never truly be done.  As a web developer, I will be constantly learning and growing therefore my website will need to match this journey and evolution.&lt;/p&gt;
 
-&lt;p&gt;Now comes the hard part… taking a new picture. (I am not a fan of taking pictures)&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><category term="project, tech, personal" /><summary type="html">It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. TraiLynne.org is mine and I decided I am going to build and design the page to truly reflect me.</summary></entry></feed>
+&lt;p&gt;Now comes the hard part… taking a new picture. (I am not a fan of taking pictures)&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">It’s been a while since I have posted. I have been trying to find a way to use my blog in a way that works best for me. I love having my own website, don’t get me wrong. However, my website was not accurately reflecting who I am. After spending a while deciding on how I can create a new portfolio website and racking my brain for a domain name to use, I realized I had already chosen the perfect domain for me. TraiLynne.org is mine and I decided I am going to build and design the page to truly reflect me.</summary></entry><entry><title type="html">Progress Report</title><link href="http://localhost:4000/blog/personal/2017/08/07/progress_report.html" rel="alternate" type="text/html" title="Progress Report" /><published>2017-08-07T15:12:44-04:00</published><updated>2017-08-07T15:12:44-04:00</updated><id>http://localhost:4000/blog/personal/2017/08/07/progress_report</id><content type="html" xml:base="http://localhost:4000/blog/personal/2017/08/07/progress_report.html">&lt;p&gt;It would be an understatement to say that I am proud of myself. The amount of knowledge I have gained over my journey to becoming a Full-Stack Web Developer goes beyond words. I was making a list of the skills I have learned over the last 8 months. Each time I thought I was done, a new skill popped into my mind. Flatiron has been one of my greatest accomplishments. I am about 2 months away from graduating and it feels so amazing. I didn’t shy away from the challenge. All the times I wanted to give up because I felt like I wasn’t getting anywhere had to take a backseat. I refuse to give up on myself.&lt;/p&gt;
+
+&lt;p&gt;I faced imposter syndrome a few times. Each time I would go for a review of my projects, I felt like there was no way I would pass. That I would say the wrong thing and it would show that I have no idea what I’m doing. It made my day when I passed my Ruby on Rails Portfolio Project. Corinna, the instructor reviewing my assignment, rendered me speechless. She said she could tell this was the right place for me. She helped me realize that I am going in the right direction. That this isn’t just a phase, this is something I can truly go all the way with. I AM A WEB DEVELOPER. I have never been so excited about doing something in my life.&lt;/p&gt;
+
+&lt;p&gt;I am a very introverted person. Talking to people makes me nervous and I have a hard time asking for help. When talking to others, my mind moves a million miles a minute and I stand there dumbfounded without the words to truly express myself. This is my next biggest challenge. I admit, the thought of networking scares the life out of me. Talking to people I have never met, trying to create connections, it doesn’t come easily to me. My career coach helped by stating that if I hold back on details of myself, nobody will ever get the full picture of what I have to offer. It makes so much sense but my stomach and nerves have not figured out how to calm down. I don’t know what to say, how to begin or how to get rid of the feeling that I am bothering people by asking for help and advice. But in order to get to the next step, I am going to have to step out of my comfort zone.&lt;/p&gt;
+
+&lt;p&gt;It is a challenge in my current circumstance because I live in a small area. There are not meet ups I can get to, I have limited transportation and social media has never been very big in my life. I’ve been trying to find alternative methods to get involved in my community. I am learning to be more involved on Twitter. #CodeNewbies has weekly check-ins for coding goals. I’ve been on LinkedIn searching for fellow Flatiron alumni. I continue to be proud of the steps I take and avoiding negativity in my thought process. It has been an amazing journey and learning experience. I’ve come so far and the great part is that this is just the beginning.&lt;/p&gt;</content><author><name>Trai Lynne Compton</name></author><summary type="html">It would be an understatement to say that I am proud of myself. The amount of knowledge I have gained over my journey to becoming a Full-Stack Web Developer goes beyond words. I was making a list of the skills I have learned over the last 8 months. Each time I thought I was done, a new skill popped into my mind. Flatiron has been one of my greatest accomplishments. I am about 2 months away from graduating and it feels so amazing. I didn’t shy away from the challenge. All the times I wanted to give up because I felt like I wasn’t getting anywhere had to take a backseat. I refuse to give up on myself.</summary></entry></feed>

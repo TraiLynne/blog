@@ -2,7 +2,8 @@
 layout: post
 title:  "My 'Love Hate Thing' for RegEx"
 date:   2017-03-05 15:54:31 +0000
-Category: tech
+categories: tech
+background: '/img/posts/bg-default.jpg'
 ---
 
 

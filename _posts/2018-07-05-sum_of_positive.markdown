@@ -3,7 +3,8 @@ layout: post
 title:  "Sum of Positive"
 subtitle: "A Programmers Mind Decoded"
 date:   2018-07-05 13:45:44 -0500
-category: challenge
+categories: challenge
+background: '/img/posts/bg-default.jpg'
 ---
 
 As a CodeWars beta member, I just completed training on the "Sum of positive" kata. <a href="www.codewars.com/r/driA8A">Take the initiation</a> to join me and start training too!

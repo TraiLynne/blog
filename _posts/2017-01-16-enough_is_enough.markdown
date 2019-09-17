@@ -2,7 +2,8 @@
 layout: post
 title:  "Enough is Enough"
 date:   2017-01-16 10:16:44 -0500
-category: personal
+categories: personal
+background: '/img/posts/bg-default.jpg'
 ---
 
 
