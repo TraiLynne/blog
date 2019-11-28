@@ -9,13 +9,13 @@ background: '/img/posts/bg-default.jpg'
 
 # The Box Model
 
-![the box model](../img/posts/box-model.png)
+![the box model]({{ site.baseurl }}/img/posts/box-model.png){:.center-img}
 
 Every HTML element has the same anatomy. They share common properties that we can modify to create the structure and render them to the page. We like to refer to this set up as __The Box Model__. You start to use these properties more when you get on the design side of Web Development.
 
 ## Margin
 
-![margin](../img/posts/box-model-margin.png)
+![margin]({{ site.baseurl }}/img/posts/box-model-margin.png){:.center-img}
 
 Working from the outside in, we are first introduced to the margin. This can be defined as the transparent area (whitespace) that surrounds the element or space between the border of an element and everything else on the page.
 
@@ -59,7 +59,7 @@ To the School House Rock fans out there, you’ve got to remember the song Elbow
 
 ## Border
 
-![margin](../img/posts/box-model-border.png)
+![border]({{ site.baseurl }}/img/posts/box-model-border.png){:.center-img}
 
 Whether it’s seen or not, the border of an element is always there. This is the membrane around the element that holds it all in. Styling can be added for visual effects or aesthetic appeal. Appropriately named, the border is what separates the margin and everything outside the element from the padding and content within.
 
@@ -138,7 +138,7 @@ The individual sides of a border can be changed as well by following this syntax
 
 ## Padding
 
-![margin](../img/posts/box-model-padding.png)
+![padding]({{ site.baseurl }}/img/posts/box-model-padding.png){:.center-img}
 
 We have officially entered the inside of the element. The margin created elbow room outside the element, the padding does the same for the inside. Yes, it is just more whitespace. Nevertheless, it is still important to understand in order to guarantee a great user experience and interface. It provides readability by keeping the content we see from crashing into the border or running so close to the edge.
 
@@ -179,7 +179,7 @@ You can find similarities for it's syntax when compared to margin.
 
 ## Content
 
-![margin](../img/posts/box-model-content.png)
+![content]({{ site.baseurl }}/img/posts/box-model-content.png){:.center-img}
 
 This is the text or image that is rendered, what the user actually sees and interacts with. While most users unknowingly appreciate all the properties of the Box Model, the content typically takes the most attention. When all the other properties of the element are balanced, the content is eye-catching, scroll-stopping material.
 
