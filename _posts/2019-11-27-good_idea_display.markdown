@@ -2,7 +2,7 @@
 layout: post
 title:  "Good Idea!"
 subtitle: "Sample Project"
-date:   2018-11-27 18:30:44 -0500
+date:   2019-11-27 18:30:44 -0500
 categories: project
 background: '/img/posts/bg-default.jpg'
 ---
@@ -11,9 +11,9 @@ Being able to create a user interface from scratch based on a design file is con
 
 ### This project highlights mastery in:
 - User Interface
-- [The Box Model]({{ site.baseurl }}/_posts/2019-11-27-the_box_model.markdown)
-- [CSS Resets]({{ site.baseurl }}/_posts/2019-11-27-css_resets.markdown)
-- [CSS Display Properties]({{ site.baseurl }}/_posts/2019-11-27-css_display_properties.markdown)
+- [The Box Model](https://trailynne.org/blog/tech/2019/11/27/the_box_model.html)
+- [CSS Resets](https://trailynne.org/blog/tech/2019/11/27/css_reset.html)
+- [CSS Display Properties](https://trailynne.org/blog/tech/2019/11/27/css_display_properties.html)
 
 ### Links
 - [Live Demo](https://trailynne.org/User-Interface/)
