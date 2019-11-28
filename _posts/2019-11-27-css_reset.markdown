@@ -1,0 +1,78 @@
+---
+layout: post
+title:  "CSS Resets"
+date:   2019-11-27 18:11:00 -0500
+categories: tech
+background: '/img/posts/bg-default.jpg'
+---
+
+# CSS Resets
+
+Take a look at the code below:
+
+```
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+```
+
+## Can you tell what's happening?
+
+![Think about it]({{ site.baseurl }}/img/posts/css-reset.jpg){:.center-img}
+
+You notice that basically every HTML element has been set to have absolutely no design to it. We call this a CSS reset and it is used to create a consistent rendering experience across multiple browsers.
+
+The above example is provided to us by Eric Meyer
+
+Believe it or not, _Google Chrome_ has a different way of rendering HTML & CSS than _Mozilla Firefox_ or _Internet Explorer_ would. Without the CSS reset, the same HTML and CSS coded for a page could look very different (& in some cases horrible) on different browsers. In order to have the page look the same regardless of the browser being used, the CSS reset is placed at the top of a CSS file to erase any default settings the browser may try to place on the rendering of a page. 
+
+### Resources
+- [Eric Meyer's CSS Tools: Reset CSS Blog Post](https://meyerweb.com/eric/tools/css/reset/)
+- [What Is A CSS Reset?](https://cssreset.com/what-is-a-css-reset/)
+- [Eric Meyer’s “Reset CSS” 2.0](https://cssreset.com/scripts/eric-meyer-reset-css/)
