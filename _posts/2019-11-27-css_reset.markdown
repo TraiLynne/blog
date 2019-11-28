@@ -6,8 +6,6 @@ categories: tech
 background: '/img/posts/bg-default.jpg'
 ---
 
-# CSS Resets
-
 Take a look at the code below:
 
 ```

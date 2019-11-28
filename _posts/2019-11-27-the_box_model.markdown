@@ -7,8 +7,6 @@ categories: tech
 background: '/img/posts/bg-default.jpg'
 ---
 
-# The Box Model
-
 ![the box model]({{ site.baseurl }}/img/posts/box-model.png){:.center-img}
 
 Every HTML element has the same anatomy. They share common properties that we can modify to create the structure and render them to the page. We like to refer to this set up as __The Box Model__. You start to use these properties more when you get on the design side of Web Development.

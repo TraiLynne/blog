@@ -6,8 +6,6 @@ categories: tech
 background: '/img/posts/bg-default.jpg'
 ---
 
-# Display Properties
-
 Understanding the different display property values will be fundamental in building the layout of any webpage or application.
 
 ## `display: none;`
