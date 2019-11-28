@@ -24,7 +24,7 @@ Setting an elements visibility to hidden simply hides the content of that elemen
 
 ## `display: inline;`
 
-![Display Inline]({{ site.baseurl }}/img/posts/display-none.jpg){:.center-img}
+![Display Inline]({{ site.baseurl }}/img/posts/display-inline.jpg){:.center-img}
 
 Some familiar inline HTML elements by default are:
 - `<a>` the anchor tag
@@ -53,4 +53,8 @@ Some example of our natural pushy elements include:
 
 These are our hybrid elements that take the good from both sides. From their inline heritage, they inherit the ability to sit next to each other. The block side of their bloodline grants them the ability to adjust the width and height properties. 
 
+Similar to clothes drying on a clothesline, each piece has it's own height and width but exists on the same line as the other pieces.
+
 ### Resources
+- [MDN: Display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- [W3Schools display: inline-block](https://www.w3schools.com/Css/css_inline-block.asp)
