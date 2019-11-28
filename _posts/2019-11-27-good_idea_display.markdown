@@ -9,6 +9,8 @@ background: '/img/posts/bg-default.jpg'
 
 Being able to create a user interface from scratch based on a design file is considered a basic necessity for front end developers. To keep my skills strong, I built a single page website using HTML, CSS and a little JavaScript as a stretch.
 
+![Desktop Design File]({{ site.baseurl }}/img/posts/good-idea-desktop-design.jpg){:.center-img}
+
 ### This project highlights mastery in:
 - User Interface
 - [The Box Model](https://trailynne.org/blog/tech/2019/11/27/the_box_model.html)
@@ -20,9 +22,7 @@ Being able to create a user interface from scratch based on a design file is con
 - [Github](https://github.com/TraiLynne/User-Interface)
 
 ## Prep Work
-The first step I took was to study the desktop design file (shown below). My goal was to visualize how I would convert the design into HTML and CSS. I usually take the design file and break it down into different areas to understand the HTML structure. This gives me a plan of action for building out the page.
-
-![Desktop Design File]({{ site.baseurl }}/img/posts/good-idea-desktop-design.jpg){:.center-img}
+The first step I took was to study the desktop design file (displayed above). My goal was to visualize how I would convert the design into HTML and CSS. I usually take the design file and break it down into different areas to understand the HTML structure. This gives me a plan of action for building out the page.
 
 ## Add Structure
 
@@ -32,6 +32,7 @@ The content and images for the page was provided to me prior to coding. The kick
 
 There were some restrictions placed on the styling of the page in order to increase my understanding of the Box Model and display properties. Using the desktop design file as a visual guide, I was allowed to use any CSS properties you want for general styling. However, for the layout, only the box model properties (content, padding, margin, border) and `display:inline-block` could be used.
 
+## The Results Are In 
 ![Good Idea Desktop]({{ site.baseurl }}/img/posts/gi-og-home.png){:.center-img}
 
 ## Flex Those Skills
