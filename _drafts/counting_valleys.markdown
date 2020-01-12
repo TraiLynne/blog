@@ -1,11 +1,17 @@
-# Counting Valleys
+---
+layout: post
+title:  "Counting Valleys Challenge"
+subtitle: "A Programmers Mind Decoded"
+date:   2020-01-11 22:29:44 -0500
+categories: challenge
+background: '/img/posts/bg-default.jpg'
+---
 
 > Language(s): JavaScript
 
 Success! I solved Counting Valleys on [HackerRank](https://www.hackerrank.com/). Can you complete the [challenge](https://www.hackerrank.com/challenges/counting-valleys/)?
 
 ## Description
-
 
 > Function Description
 
@@ -43,20 +49,19 @@ Print a single integer that denotes the number of valleys Gary walked through du
 
 ```1```
 
-
-## Decomposition: 
+## Decomposition
 
 > Break It Down
 
 1. Start at level 0
 2. Determine the direction of the next step
 3. Add or Subtract based on level
-4. Confirm if the previous status was above or bellow sea level    
+4. Confirm if the previous status was above or bellow sea level
     - if above, add 1 to valleys
     - if below, valley number does not change
 5. After full traversal, return number of valleys
 
-## Abstraction: 
+## Abstraction
 
 > What is Absolutely Needed
 
@@ -64,54 +69,53 @@ Print a single integer that denotes the number of valleys Gary walked through du
 - Valley Counter
 - Valley status
 
-
-## Pattern Recognition 
+## Pattern Recognition
 
 > Possible Functions
 
-- Determine level 
+- Determine level
 - Compare previous level status and update as needed
 
 ## Pseudocode
 
-```
+```javascript
 function valleyCounter(n, s){
-	steps = s.split
-	v = 0
-	currentLevel = 0
-	inValley = false
-
-	steps.forEach( s -> {
-		calculateLevel()
-		detemineValley()
-	}
-
-	return v;
-end 
+  steps = s.split
+  v = 0
+  currentLevel = 0
+  inValley = false
+  
+  steps.forEach( s -> {
+      calculateLevel()
+      determineValley()
+  }
+  
+  return v;
+end
 ```
 
-```
+```javascript
 calculateLevel(s){
-	if s = U
-		currentLevel += 1
-	else 
-		currentLevel -=1
+    if s = U
+      currentLevel += 1
+    else
+      currentLevel -=1
 }
 ```
 
-```
+```javascript
 determineValley(currentLevel, v, inValley) {
-	if (currentLevel < 0 && inValley = false)
-		v += 1
-		inValley = true
-	if (currentLevel >= 0 && inValley = true)
-		inValley = false
+    if (currentLevel < 0 && inValley = false)
+      v += 1
+      inValley = true
+    if (currentLevel >= 0 && inValley = true)
+      inValley = false
 }
 ```
 
 ## My Solution
 
-```
+```javascript
 function countingValleys(n, s) {
     let valleyCount = 0;
     let steps = s.split("");
