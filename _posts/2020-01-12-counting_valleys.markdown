@@ -15,15 +15,15 @@ Success! I solved Counting Valleys on [HackerRank](https://www.hackerrank.com/).
 
 > Function Description
 
-Complete the ```countingValleys``` function. It must return an integer that denotes the number of valleys Gary traversed.
+Complete the `countingValleys` function. It must return an integer that denotes the number of valleys Gary traversed.
 
 > Parameter(s)
 
-```countingValleys``` has the following parameter(s):
+`countingValleys` has the following parameter(s):
 
-```n```: the number of steps Gary takes
+`n`: the number of steps Gary takes
 
-```s```: a string describing his path
+`s`: a string describing his path
 
 > Input Format
 
@@ -32,8 +32,8 @@ The second line contains a single string , of  characters that describe his path
 
 > Constraints
 
-- ```n``` will be between or equal to 2 and 10^6
-- ```s``` will consist of the letters U or D
+- `n` will be between or equal to 2 and 10^6
+- `s` will consist of the letters U or D
 
 > Output Format
 
@@ -41,13 +41,12 @@ Print a single integer that denotes the number of valleys Gary walked through du
 
 > Sample Input
 
-```8```
-
-```UDDDUDUU```
+`8`
+`UDDDUDUU`
 
 > Sample Output
 
-```1```
+`1`
 
 ## Decomposition
 
