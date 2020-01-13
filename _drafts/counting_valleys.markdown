@@ -140,3 +140,14 @@ function countingValleys(n, s) {
     return valleyCount;
 }
 ```
+
+> So what is happening here?
+
+1. We create a variable to keep track of the number of valleys Gary enters, his current sea level, and if he is in a valley or not.
+2. There is also a variable for steps which is just the string of steps provided as an argument split up by individual letter in order to process each step one at a time.
+3. For each step taken:
+    - We determine if the level Gary is at goes up or down based on the letter on every step.
+    - If the Current Level is less than 0 AND Gary is not currently in a valley status based on his last step, we increase the number of valleys by 1 and change Gary's status to in the valley.
+    - On the other hand, if on Gary's current step, his level is above or equal to 0 AND his in Valley status is true based on his last step, we change his in valley status to false.
+    - Any other combinations of Sea Level and Valley Status will not make any changes
+4. Once all the steps have been evaluated, we return the number of valleys Gary entered.
