@@ -25,11 +25,6 @@ Complete the `countingValleys` function. It must return an integer that denotes 
 
 `s`: a string describing his path
 
-> Input Format
-
-The first line contains an integer , the number of steps in Gary's hike.
-The second line contains a single string , of  characters that describe his path.
-
 > Constraints
 
 - `n` will be between or equal to 2 and 10^6
@@ -41,8 +36,7 @@ Print a single integer that denotes the number of valleys Gary walked through du
 
 > Sample Input
 
-`8`
-`UDDDUDUU`
+`8, UDDDUDUU`
 
 > Sample Output
 
