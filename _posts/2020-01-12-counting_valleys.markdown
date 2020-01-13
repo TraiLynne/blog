@@ -2,7 +2,7 @@
 layout: post
 title:  "Counting Valleys Challenge"
 subtitle: "A Programmers Mind Decoded"
-date:   2020-01-11 22:29:44 -0500
+date:   2020-01-12 17:30:44 -0500
 categories: challenge
 background: '/img/posts/bg-default.jpg'
 ---
