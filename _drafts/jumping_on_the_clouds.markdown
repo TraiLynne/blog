@@ -66,31 +66,74 @@ The only thundercloud to avoid is c[4]. Emma can win the game in 3 jumps
 
 > Break It Down
 
-
+1. Start at cloud 0
+2. Determine if I can move 2 clouds ahead
+    - Yes :: Move 2 clouds and add 1 jump
+    - No :: Move 1 cloud and add 1 jump
+3. Repeat until I reach the last cloud
+4. Return the number of jumps taken
 
 ## Abstraction
 
 > What is Absolutely Needed
 
+- A way to track the current cloud
+- A way to track the jumps taken
+
 
 ## Pattern Recognition
 
-> Possible Functions
+> Possible Functions or Loops
 
+- Determine which cloud to jump to next
+- Add to jump count
 
 ## Pseudocode
 
 ```javascript
-if c[i + 1] = 0
-    count + 1
-Else count + 2
+jumps = 0
+currentCloudIndex = 0
 
+START LOOP
+while currentCloudIndex is LESS THAN the LENGTH of CLOUDS
+    if currentCloudIndex + 2 IS SAFE
+        ADD 1 to JUMPS
+        ADD 2 to the currentCloudIndex
+    if currentCloudIndex + 2 IS NOT SAFE
+        ADD 1 to JUMPS
+        ADD 1 to the currentCloudIndex
+END LOOP
+
+RETURN JUMPS
 ```
 
 ## My Solution
 
 ```javascript
+function jumpingOnClouds(c) {
+    let jumps = 0;
+    let currentCloud = 0;
+    let end = c.length - 1;
 
+    while(currentCloud < end){
+        c[currentCloud + 2] === 1 ?
+            currentCloud += 1
+            :currentCloud += 2
+            
+        jumps += 1;
+    }
+
+    return jumps;
+}
 ```
 
 > So what is happening here?
+
+1. We set our variables for jumps to 0. We also set the currentCloud to 0 because that is the index of the cloud we currently occupy.
+2. There is also an optional variable called `end` which denotes the index of the very last cloud. We calculate this by taking the length of our `c` variable (the clouds array submitted as a parameter) and subtract 1 because arrays are 0-indexed. 
+3. We begin our loop for determining which cloud to jump to stopping the loop once the `currentCloud` variable value is equal to the `end` variable value
+4. On each iteration of the loop, we check to see if the `currentCloud` index plus 2 has a value of 1.
+    - If yes, we add 1 to our `currentCloud` variable as it is only safe to move one cloud ahead
+    - If not, we can safely move 2 clouds ahead, so we add 2 to the `currentCloud` tracker
+5. Each iteration of the loop will add 1 to the jump value regardless of how many clouds ahead we move.
+6. Once we have reached the final cloud, we exit our loop and return the number of jumps tallied. 
