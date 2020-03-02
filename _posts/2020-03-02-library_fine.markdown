@@ -16,7 +16,7 @@ The local library needs our help. They currently calculate fines manually, which
 1. If the book is returned on or before the expected date, there is no fee to apply.
 2. If the book is returned after the due date, but within the same month, apply a fee of 15 Hakkos per day late.
 3. If the book is returned within the same year of the expected date, but not within the same month, apply a fee of 500 Hakkos per month late.
-4. If the book is returned any year later than the expected year, apply a fixed fee of 10000 Hakkos, no exceptions. 
+4. If the book is returned any year later than the expected year, apply a fixed fee of 10000 Hakkos, no exceptions.
 
 ## Description
 
@@ -49,11 +49,11 @@ Print a single integer denoting the library fine for the book received as input.
 
 > Sample Input
 
-9, 6, 2015, 9, 9, 2015
+`9, 6, 2015, 9, 9, 2015`
 
 > Sample Output
 
-45
+`45`
 
 ## Decomposition
 
@@ -77,7 +77,7 @@ Print a single integer denoting the library fine for the book received as input.
     - Based on tag
         - On time
             - Apply no fee and return 0
-        - Daily 
+        - Daily
             - Return Number of days late times x 15
         - Monthly
             - Return number of months late x 500
@@ -97,6 +97,7 @@ Print a single integer denoting the library fine for the book received as input.
 ## Pattern Recognition
 
 > Possible Functions
+
 - Is it late
 - Determine fee to apply
 - Calculate fee
@@ -117,7 +118,7 @@ let isItLate = (d1, m1, y1, d2, m2, y2) => {
         : (y1 > y2) ?
             true
             : (y1 == y2) && (m1 > m2) ?
-                true 
+                true
                 : (m1 == m2) && (d1 > d2) ?
                     true
                     : false
@@ -155,21 +156,20 @@ function libraryFineOriginal(d1, m1, y1, d2, m2, y2) {
 }
 ```
 
-
 > So what is happening here?
-In my original solution, I follow my journal thinking step by step. 
+In my original solution, I follow my journal thinking step by step.
 
-I created a function for determining if the book is late vs on time in my `isItLate` function. Once that has been determined, there is either an `onTime` tag placed or the dates are passed into another function that determines the fee schedule to apply. 
+I created a function for determining if the book is late vs on time in my `isItLate` function. Once that has been determined, there is either an `onTime` tag placed or the dates are passed into another function that determines the fee schedule to apply.
 
-Within the `determineFee` function, the dates are again compared pretty similar to the prior function. One of four tags is placed within the `feesToAPply` array: `dailyFee`, `monthlyFee`, `fixedFee`, or `onTime`. If an `onTime` tag is still applied, something went wrong because no on time book should have been passed to this function. 
+Within the `determineFee` function, the dates are again compared pretty similar to the prior function. One of four tags is placed within the `feesToApply` array: `dailyFee`, `monthlyFee`, `fixedFee`, or `onTime`. If an `onTime` tag is still applied, something went wrong because no on time book should have been passed to this function.
 
-This caught me up on some edge cases. There were some weird dates that kept getting through. I found out it was in my logic for the `isItLate` function. I got it resolved and fixed all the edge cases. 
+This caught me up on some edge cases. There were some weird dates that kept getting through. I found out it was in my logic for the `isItLate` function. I got it resolved and fixed all the edge cases.
 
 From here the `applyFee` function is called. This function calculates and returns the fee to apply based on the fee schedule tag.
 
 ![Code Sample - Original Solution]({{ site.baseurl }}/img/posts/libraryFineOriginalSolution.png){:.center-img}
 
-In school, we went about solving code challenges using the 'Red, Green, Refactor` approach. 
+In school, we went about solving code challenges using the 'Red, Green, Refactor` approach.
 
 In the beginning, no tests are passing. Most of the time these failing tests come across in the color red.
 
