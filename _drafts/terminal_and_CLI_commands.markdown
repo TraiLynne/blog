@@ -69,7 +69,7 @@ Take advantage of Task Runners & Preprocessors such as a SASS & LESS.
 
 The CLI allows us to run a local server on our computer for real-time updates without real-world eyes on a premature project. 
 
-### Word to the Wise, Be comfortable & cautious
+## Word to the Wise, Be comfortable & cautious
 
 Get started early!! This can't be addressed enough. Learn to become comfortable with the CLI and its commands early in your journey. Exercise your ability as often as possible. But be cautious with the commands you execute. Ensure you understand what they do and the consequences that may accompany it.
 
