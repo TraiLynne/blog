@@ -7,7 +7,7 @@ categories: challenge
 background: '/img/posts/bg-default.jpg'
 ---
 
-> Language(s): JavaScript
+> Language(s): __JavaScript__, Ruby, Python, C
 
 Success! I solved Library Fine on [HackerRank](https://www.hackerrank.com/). Can you complete the [challenge](https://www.hackerrank.com/challenges/library-fine/problem)?
 
@@ -217,3 +217,57 @@ So much cleaner and still gets the same results. Some benefits of this version a
 ![Code Sample - Original Solution]({{ site.baseurl }}/img/posts/libraryFineRefactored.png){:.center-img}
 
 Even the flow chart has been cleaned up. This one is much easier to follow.
+
+## Additional Solutions
+
+> Ruby
+
+```ruby
+def libraryFine(d1, m1, y1, d2, m2, y2)
+    if y1 < y2
+        return 0
+    elsif y1 > y2
+        return 10000
+    elsif y1 === y2 and m1 > m2
+        return 500 * (m1 - m2)
+    elsif m1 === m2 and d1 > d2
+        return 15 * (d1 -d2)
+    else
+        return 0
+    end
+end
+```
+
+> Python
+
+```python
+def libraryFine(d1, m1, y1, d2, m2, y2):
+    if y1 < y2:
+        return 0
+    elif y1 > y2:
+        return 10000
+    elif y1 == y2 and m1 > m2:
+        return 500 * (m1 - m2)
+    elif m1 == m2 and d1 > d2:
+        return 15 * (d1 -d2)
+    else:
+        return 0
+```
+
+> C
+
+```c
+int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+    if (y1 < y2) {
+        return 0;
+    } else if (y1 > y2) {
+        return 10000;
+    } else if (y1 == y2 && m1 > m2) {
+        return 500 * (m1 - m2);
+    } else if (m1 == m2 && d1 > d2) {
+        return 15 * (d1 -d2);
+    } else {
+        return 0;
+    }
+}
+```
