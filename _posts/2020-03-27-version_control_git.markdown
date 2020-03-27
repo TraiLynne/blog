@@ -2,14 +2,19 @@
 layout: post
 title:  "Version Control"
 subtitle: "Intro to Git & GitHub"
-date:   2020-03-11 20:36:00 -0500
+date:   2020-03-27 14:01:00 -0500
 categories: tech
 background: '/img/posts/bg-default.jpg'
 ---
 
 Version control is both a process and system used to organize different versions of work files.
 
+![Version Control]({{ site.baseurl }}/img/posts/version-control.png){:.center-img}
+> [Image Source](https://idoc.co.in/features-document-management-system/version-control)
+
 When it comes to typically saving files, we preserve the document one version at a time. Any previous versions of that file can no longer be accessed. You usually find a timestamp of the most recent alteration. However, a timeline of the changes is not available. In this fashion, it’s best for only one person to work on the file at a time.
+
+![Save Icon]({{ site.baseurl }}/img/posts/save_icon.png){:.center-img}
 
 But what if you want to keep track of the different versions of that file? It’s possible but tedious. All you need to do is save the file as a copy every time we change something. But who wants to do that? Not to mention the amount of memory we use. The solution? Version control.
 
@@ -21,11 +26,13 @@ While many brands of version control are out there, the most popular is Git. Thi
 
 Install Git Bash for Window's [here](https://git-scm.com/download/win)
 
-## Git vs. GitHub
-
 Git and GitHub are commonly confused, but don’t let the names baffle you. These are two completely different tools.
 
+![Git Logo]({{ site.baseurl }}/img/posts/git_logo.jpg){:.center-img}
+
 Git is a version control software with widespread use in web development.
+
+![GitHub Logo]({{ site.baseurl }}/img/posts/github_logo.jpeg){:.center-img}
 
 On the other hand, GitHub is a cloud that holds all those repos. Breaking down the name, we notice how descriptive it is. It is a hub or collection of different repositories made with Git.  It also allows others to view projects, request a copy for modification, and submit those changes for review and acceptance into the final project.
 
