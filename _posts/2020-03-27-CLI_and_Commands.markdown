@@ -1,4 +1,10 @@
-# The Terminal
+---
+layout: post
+title:  "CLI & its Commands"
+date:   2020-03-27 13:27:00 -0500
+categories: tech
+background: '/img/posts/hacker.jpeg'
+---
 
 One of the reasons I fell in love with technology while growing up was seeing the computer whiz in the movies, well specifically the hacking scenes, not even going to lie. I always felt they held the highest power in a group; they seem to be the secret weapon of any team. Everybody looks to them for information, problem-solving, etc. I always wanted to be that person. The thing that excited me the most was that black screen that would pop up with a bunch of different letters and numbers. It seemed to be in a language that only the computer whiz could understand. I needed to learn this secret language.
 
