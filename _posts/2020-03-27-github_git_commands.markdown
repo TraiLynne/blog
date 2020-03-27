@@ -33,11 +33,11 @@ Once you click this button, you will be asked where you want the forked copy to 
 
 You will see an animation stating the process is being completed. When all is said and done, you will be redirected to your forked copy of the repository.
 
-![After Fork]({{ site.baseurl }}/img/posts/AfterWork.png){:.center-img}
+![After Fork]({{ site.baseurl }}/img/posts/AfterFork.png){:.center-img}
 
 What’s next? Let’s clone.
 
-![Clone with SSH]({{ site.baseurl }}/img/posts/SSH.png){:.center-img}
+![Clone with SSH]({{ site.baseurl }}/img/posts/clone_with_SSH.png){:.center-img}
 
 ![Clone with HTTPS]({{ site.baseurl }}/img/posts/clone_with_HTTPS.png){:.center-img}
 
@@ -59,37 +59,37 @@ So, how do we alert GitHub of these new changes? There are a few steps we can fo
 
 Ok, let’s say we have the project on our computer and are ready to get started.
 
-1. Let’s create a branch using `git checkout -b example-branch`
+### Let’s create a branch using `git checkout -b example-branch`
 
 We are now on our new branch and can make all those modification our heart desires. Once we save those changes, we run few more commands to let GitHub know we need to update our repository.
 
-2. `git status`
+### `git status`
 
 Any changes made to the files are not official to your Git until you tell it track those changes.  In order to find out if there are any files that Git is not tracking, we run our git status command. If all is well, the names of the files modified will typically show up in your terminal denoted in green letters. If there are changes not being tracked on a file, the name of that file will appear in read.
 
-3. `git add`
+### `git add`
 
 In order to tell Git to track the changes of a file, we run the git add command followed by the file name. A clever shortcut available to us is `git add .`; this command adds any and all untracked files to the next round being sent to the cloud.
 
-4. `git commit`
+### `git commit`
 
 Once we have all those changes tracked by git, we need to let git know to go ahead and save this version of the repo. With commit, we can add a message describing what changes have been made. The syntax you want to follow for a commit is as follows: `git commit -m “message describing modification”`
 
 __*Pro Tip*__: When creating a commit description, be sure to add as much detail as possible in the most direct way. This will help you and others in the future. Instead of having to open the previous version of the project and compare it to the current version, this small description will help save you and your team headaches and time if it is done right.
 
-5. `git checkout master`
+### `git checkout master`
 
 While on our editing branch, we move over to our master branch
 
-6. `git pull origin master`
+### `git pull origin master`
 
 Updates our version of the files with the most recent and approved finalized version. This is a very important step. You may not see your team members actively working in your face so in order to stay up to date, always pull before you send your changes up.
 
-7. `git merge {branch_name}`
+### `git merge {branch_name}`
 
 Once we have those updated changes pulled down from the cloud, we go ahead and merge our changes to our master copy. We then merge our changes from our editing branch into our master copy on our machine by running `git merge example_branch`. From here, we will be alerted of any confections between our code updates and the master copy. We can then make those adjustments and send it to GitHub.
 
-8. `git push origin master`
+### `git push origin master`
 
 This command is final conformation. It takes the modifications you made on the file, the description of what happened, the timestamp, and the author of the contributions to GitHub. Now others have access to your changes.
 
