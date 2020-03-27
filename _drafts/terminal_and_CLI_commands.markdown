@@ -8,6 +8,8 @@ Well, I have come of age and realized that intimidating yet intriguing screen is
 
 Have you ever heard of __Window’s Command Line__ or __Power Shell__?
 
+![Window's Command Line and Power Shell Logos]({{ site.baseurl }}/img/posts/notCLI_logo.png){:.center-img}
+
 These names, even some of the operations that can be performed, may cause the wolf to be in sheep’s wool. Nevertheless, these are not programs under the Command Line Interface umbrella we are covering under this subject.
 
 ## So , what is the CLI?
