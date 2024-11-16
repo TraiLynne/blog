@@ -58,6 +58,43 @@ layout: default
         {% endfor %} {% endcomment %}
 
 <div class="accordion" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style='color: #C13524'>
+            <i class="fas fa-chevron-circle-down"></i> Dev Diary: Weekly Insights
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#accordionExample">
+        <div class="card-body">
+          {% for post in site.categories["dev-diary"] %}
+            <div class="post-preview">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                    <h2 class="post-title">
+                        {{ post.title }}
+                    </h2>
+                    {% if post.subtitle %}
+                    <h3 class="post-subtitle">
+                        {{ post.subtitle }}
+                    </h3>
+                    {% endif %}
+                </a>
+                <p class="post-meta">Posted by
+              {% if post.author %}
+              {{ post.author }}
+              {% else %}
+              {{ site.author }}
+              {% endif %}
+              on
+              {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
+            </p>
+            </div>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
   <div class="card">
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
