@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "🚀 Week 1 – Laying the Foundation for Skill Sharpening"
-date: 2024-11-12 08:00:00 -0500
+date: 2024-11-17 08:00:00 -0500
 categories: diary
 background: "/img/posts/bg-default.jpg"
 ---
 
-### 🚀 Week 1: Setting the Stage for Success
+### Setting the Stage for Success
 
 As I prepare for my next software engineering role, I’m kicking off a focused learning journey designed to sharpen my skills and keep me up-to-date with the latest technologies. In Week 1, I’m revisiting core concepts and tackling foundational exercises across React, JavaScript, Ruby, Node.js, and Git. This week will be all about building a solid base and refreshing key skills before diving deeper in the coming weeks.
 
