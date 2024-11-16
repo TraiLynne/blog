@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "🚀 Week 1 – Laying the Foundation for Skill Sharpening"
-date: 2024-11-17 08:00:00 -0500
+date: 2024-11-12 08:00:00 -0500
 categories: diary
 background: "/img/posts/bg-default.jpg"
 ---
