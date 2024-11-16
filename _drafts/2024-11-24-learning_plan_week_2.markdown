@@ -2,7 +2,7 @@
 layout: post
 title: "Leveling Up with Advanced Topics"
 date: 2024-11-17 18:00:00 -0500
-categories: dev-diary
+categories: diary
 background: "/img/posts/bg-default.jpg"
 ---
 
